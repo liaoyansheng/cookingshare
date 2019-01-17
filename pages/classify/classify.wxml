@@ -1,0 +1,78 @@
+<!--pages/classify/classify.wxml-->
+<view class="page" bindtouchstart="touchStart" bindtouchend="touchEnd">
+
+  <view class='title'>热门分类</view>
+  <view class='allgenre'>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg">
+        <text>家常菜</text>
+      </image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg">
+        <text>家常菜</text>
+      </image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>        
+  </view>
+  <view class='title'>地方特色</view>
+  <view class='allgenre'>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg">
+        <text>粤菜</text>
+      </image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view> 
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>             
+  </view> 
+  <view class='title'>创意分类</view>
+  <view class='allgenre'>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>
+    <view class='genre'>
+      <image src="/image/adpic/01.jpg"></image>
+    </view>        
+  </view>  
+
+
+</view>

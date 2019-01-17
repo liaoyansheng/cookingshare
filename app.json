@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/foodhome/foodhome",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/classify/classify",
+    "pages/personal/personal"
+  ],
+  "window":{
+    "navigationBarBackgroundColor":"#FF6347",
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText": "私房菜",
+    "navigationBarTextStyle":"white"
+  },
+    "tabBar": {
+      "list": [
+        {
+          "pagePath": "pages/foodhome/foodhome",
+          "text": "美食",
+          "iconPath": "image/tabBar/c.png",
+          "selectedIconPath": "image/tabBar/111.png"
+        },
+        {
+          "pagePath": "pages/classify/classify",
+          "text": "分类",
+          "iconPath": "image/tabBar/classify.png",
+          "selectedIconPath": "image/tabBar/classify1.png"
+        },
+        {
+          "pagePath": "pages/index/index",
+          "text": "我的",
+          "iconPath": "image/tabBar/personal.png",
+          "selectedIconPath": "image/tabBar/personal1.png"
+        }
+      ],
+      "color": "#333333",
+      "selectedColor": "#FA701D"
+    }
+}

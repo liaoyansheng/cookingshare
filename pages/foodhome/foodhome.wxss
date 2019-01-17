@@ -1,0 +1,59 @@
+/* pages/foodhome/foodhome.wxss */
+.page{
+  height: 100vh;
+  width: 750rpx;
+  /* background-color: yellow; */
+}
+.searchView{
+  position: fixed;
+  top:0rpx;
+  background-color: #FF6347;
+  width:750rpx;
+  height:108rpx;
+  padding:1rpx;
+  z-index: 999;
+}
+.searchView_copy{
+  width:750rpx;
+  height:108rpx;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  width: 642rpx;
+  height:60rpx;
+  /* background: #FFFF; */
+  background-color: #FFFFFF;
+  border-radius:30rpx;
+  margin:24rpx;
+  padding:0rpx 30rpx; 
+}
+.searchinput{
+  width: 550rpx;
+  height:50rpx;
+  font-size:30rpx;
+  margin-left:20rpx;
+}
+.swiperClass {
+  margin-top: 10px;
+}
+ 
+.slide-image {
+  width: 100%; 
+  height: 90%;
+  border-radius: 10px;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+ 
+image.active {
+  transform: none;
+  transition: all 0.2s ease-in 0s;
+} 
+ 
+image.quiet {
+  transform: scale(0.8333333);
+  transition: all 0.2s ease-in 0s;
+}
