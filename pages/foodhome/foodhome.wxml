@@ -17,6 +17,39 @@
   </block>
 </swiper> 
 
-<view class="page" bindtouchstart="touchStart" bindtouchend="touchEnd">
+<view class="foodpage" bindtouchstart="touchStart" bindtouchend="touchEnd">
+
+  <view class='content'>
+    <image class='content-img' src='/image/01.jpg'></image>
+    <view class='content-title'>巧克力牛轧糖</view>
+    <view class='content-more'>
+      <text>66个赞</text>
+      <text>　·　999人收藏</text>
+    </view>
+  </view>
+  <view class='content'>
+    <image class='content-img1' src='/image/03.jpg'></image>
+    <view class='content-title'>巧克力牛轧糖</view>
+    <view class='content-more'>
+      <text>66个赞</text>
+      <text>　·　999人收藏</text>
+    </view>
+  </view>
+  <view class='content'>
+    <image class='content-img1' src='/image/02.jpg'></image>
+    <view class='content-title'>巧克力牛轧糖</view>
+    <view class='content-more'>
+      <text>66个赞</text>
+      <text>　·　999人收藏</text>
+    </view>
+  </view>
+    <view class='content'>
+    <image class='content-img' src='/image/01.jpg'></image>
+    <view class='content-title'>巧克力牛轧糖</view>
+    <view class='content-more'>
+      <text>66个赞</text>
+      <text>　·　999人收藏</text>
+    </view>
+  </view>
 
 </view>

@@ -1,9 +1,4 @@
 /* pages/foodhome/foodhome.wxss */
-.page{
-  height: 100vh;
-  width: 750rpx;
-  /* background-color: yellow; */
-}
 .searchView{
   position: fixed;
   top:0rpx;
@@ -56,4 +51,43 @@ image.active {
 image.quiet {
   transform: scale(0.8333333);
   transition: all 0.2s ease-in 0s;
+}
+.foodpage{
+  width: 750rpx;
+  margin: 10rpx;
+  display: flex;
+  flex-flow: row wrap;
+}
+.content{
+  width: 345rpx;
+  box-shadow: 0 6rpx 8rpx #eeeeee;
+  border-radius: 10rpx;
+  margin: 10rpx;
+}
+.content-img{
+  width:100%;
+  border-radius: 10rpx;
+  background-repeat:no-repeat; 
+  background-size: cover; 
+}
+.content-img1{
+  width:100%;
+  height: 400rpx;
+  border-radius: 10rpx;
+  background-repeat:no-repeat; 
+  background-size: cover; 
+}
+.content-title{
+  width: 345rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  line-height: 40rpx;
+  padding-left: 10rpx;
+}
+.content-more{
+  width: 345rpx;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  color: #A2A1A1;
+  padding:0 0 6px 10rpx;
 }

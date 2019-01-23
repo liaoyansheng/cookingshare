@@ -9,7 +9,7 @@
   "window":{
     "navigationBarBackgroundColor":"#FF6347",
     "backgroundTextStyle":"light",
-    "navigationBarTitleText": "私房菜",
+    "navigationBarTitleText": "美食分享",
     "navigationBarTextStyle":"white"
   },
     "tabBar": {
