@@ -6,7 +6,7 @@
   </view>
 </view>
 <view class='searchView_copy'></view>
-
+<!-- 搜索框 -->
 <!-- 轮播图 -->
 <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="3000" duration="1000" previous-margin="100rpx" next-margin="100rpx" circular bindchange="bindchange">
   <block wx:for="{{imgUrls}}" wx:key="{{index}}">
@@ -16,9 +16,28 @@
     </swiper-item>
   </block>
 </swiper> 
-
+<!-- 轮播图 -->
 <view class="foodpage" bindtouchstart="touchStart" bindtouchend="touchEnd">
 
+<!-- 推荐 -->
+<view class='todaygood'>今日推荐</view>
+<view class='message'>
+  <view class='flex-column'>
+    <text class='message-title'>爱美的女人每天都为自己的身体下功夫,那么女人养生吃什么好?</text>
+    <text class='message-visit'>999人看过</text>
+  </view>
+  <image class='message-img' src='/image/01.jpg'></image>  
+</view>
+<view class='message'>
+  <view class='flex-column'>
+    <text class='message-title'>爱美的女人每天都为自己的身体下功夫,那么女人养生吃什么好?</text>
+    <text class='message-visit'>999人看过</text>
+  </view>
+  <image class='message-img' src='/image/01.jpg'></image>  
+</view>
+<!-- 推荐 -->
+
+  <view class='thinklikely'><image class='like-icon' src='/image/icon/love.png'></image>猜你喜欢</view>
   <view class='content'>
     <image class='content-img' src='/image/01.jpg'></image>
     <view class='content-title'>巧克力牛轧糖</view>

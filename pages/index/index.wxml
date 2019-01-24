@@ -1,17 +1,46 @@
 <!--index.wxml-->
 <view class="page" bindtouchstart="touchStart" bindtouchend="touchEnd">
 
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class="selfinfo">
+    <block wx:if="{{!hasUserInfo && canIUse}}">
+    <image class="userinfo-avatar" src="/image/icon/headimg.png" mode="cover"></image>
+    <button class='' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一键登录 </button>
     </block>
+    <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view class='seleinfo-name'>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <image wx:if="{{userInfo.gender == 1}}" class='sex-icon' src='/image/icon/man1.png'></image>
+      <image wx:if="{{userInfo.gender == 2}}" class='sex-icon' src='/image/icon/women1.png'></image>
+    </view>
+    <view class='userinfo-area'>{{userInfo.province}},{{userInfo.city}}</view>  
+    </block>
+</view>
+
+<view class='flex-row' style='border-bottom: 2rpx solid #F2F2F2;'>
+  <view class='content-col'>
+    <text>0</text>
+    <text>收藏</text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='content-col text'>
+    <text>0</text>
+    <text>关注</text>
+  </view>
+  <view class='content-col'>
+    <text>0</text>
+    <text>评论</text>  
   </view>
 </view>
+
+<view class='setup-usercall'>我的黑暗料理</view>
+
+<view class='setup-title'>设置</view>
+<view class='setup-usercall'>用户反馈</view>
+<view class='setup-usercall'>用户反馈</view>
+<view class='setup-usercall'>用户反馈</view>
+
+
+
+
 
 </view>

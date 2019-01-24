@@ -54,7 +54,6 @@ image.quiet {
 }
 .foodpage{
   width: 750rpx;
-  margin: 10rpx;
   display: flex;
   flex-flow: row wrap;
 }
@@ -62,7 +61,7 @@ image.quiet {
   width: 345rpx;
   box-shadow: 0 6rpx 8rpx #eeeeee;
   border-radius: 10rpx;
-  margin: 10rpx;
+  margin: 15rpx;
 }
 .content-img{
   width:100%;
@@ -90,4 +89,53 @@ image.quiet {
   line-height: 50rpx;
   color: #A2A1A1;
   padding:0 0 6px 10rpx;
+}
+.message{
+  width: 710rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 8rpx solid #FFF1F1F1;
+}
+.message-title{
+  width: 480rpx;
+  font-size: 36rpx;
+  max-height:148rpx;
+}
+.message-visit{
+  width: 480rpx;
+  font-size:24rpx;
+  color:rgba(102,102,102,1);
+  line-height:35rpx;  
+  text-align:right;
+}
+.message-img{
+  width:190rpx;
+  height: 190rpx; 
+}
+.todaygood{
+  width:730rpx;
+  text-align: left;
+  line-height: 60rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #FF6347;
+  margin:0 20rpx;
+  border-bottom: 8rpx solid #FFF1F1F1;
+}
+.thinklikely{
+  width:730rpx;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  line-height: 86rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #FF6347;
+  margin:0 20rpx;
+}
+.like-icon{
+  width: 66rpx;
+  height: 66rpx;
 }
