@@ -13,6 +13,16 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  //收藏、关注、评论
+  topersonal:function(){
+    wx:wx.navigateTo({
+      url: '../personal/personal',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

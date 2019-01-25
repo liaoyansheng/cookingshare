@@ -41,6 +41,11 @@
   width:44rpx;
   height:44rpx;
 }
+.icon{
+  width:38rpx;
+  height:38rpx;  
+  margin:0 20rpx;
+}
 .content-col{
   width: 250rpx;
   height: 140rpx;
@@ -62,6 +67,10 @@
   margin:0 10px;
 }
 .setup-usercall{
+  display:flex;
+  flex-direction:row;
+  
+  align-items: center;
   width:710rpx;
   line-height: 100rpx;
   font-size: 30rpx; 

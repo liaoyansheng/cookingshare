@@ -1,7 +1,8 @@
 /* pages/classify/classify.wxss */
 .page{
-  height: 100vh;
+
   width: 100vw;
+  background: #F8F8FF;
 }
 .title{
   width: 750rpx;
@@ -23,7 +24,7 @@
   height:157rpx;
   width: 157rpx;
   margin: 0rpx 20rpx 20rpx 0rpx;
-  filter: saturate(120%)
+  /* filter: saturate(120%); */
 }
 .genre image text{
   position: relative;

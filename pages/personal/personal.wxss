@@ -1,1 +1,15 @@
 /* pages/personal/personal.wxss */
+.Navigation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:750rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #D3D3D3;
+}
+.Navigation-one{
+  width: 250rpx;
+  line-height: 100rpx;
+  text-align: center; 
+  font-size: 36rpx;
+}

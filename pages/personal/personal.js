@@ -5,9 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    statu:1,
   },
-
+  mycollection:function(){
+    this.setData({
+      statu: 1,
+    })
+  },
+  mymind:function(){
+    this.setData({
+      statu: 2,
+    })
+  },
+  mycomment:function(){
+    this.setData({
+      statu: 3,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

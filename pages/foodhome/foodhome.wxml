@@ -15,7 +15,7 @@
       </image>
     </swiper-item>
   </block>
-</swiper> 
+</swiper>
 <!-- 轮播图 -->
 <view class="foodpage" bindtouchstart="touchStart" bindtouchend="touchEnd">
 
@@ -23,7 +23,7 @@
 <view class='todaygood'>今日推荐</view>
 <view class='message'>
   <view class='flex-column'>
-    <text class='message-title'>爱美的女人每天都为自己的身体下功夫,那么女人养生吃什么好?</text>
+    <text class='message-title'>冬季饮食养生的五个原则 冬季养生食谱的四个原则所属分类： 冬季养生</text>
     <text class='message-visit'>999人看过</text>
   </view>
   <image class='message-img' src='/image/01.jpg'></image>  

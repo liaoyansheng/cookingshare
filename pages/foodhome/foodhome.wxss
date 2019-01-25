@@ -102,6 +102,12 @@ image.quiet {
   width: 480rpx;
   font-size: 36rpx;
   max-height:148rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
 }
 .message-visit{
   width: 480rpx;

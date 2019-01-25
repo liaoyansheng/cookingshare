@@ -1,2 +1,9 @@
 <!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<view class='Navigation'>
+  <block wx:if="{{statu != 1}}"><view class='Navigation-one' bindtap='mycollection'>收藏</view> </block>
+  <block wx:if="{{statu == 1}}"><view class='Navigation-one' style='border-bottom:4rpx solid #FF6347'>收藏</view> </block>
+  <block wx:if="{{statu != 2}}"><view class='Navigation-one' bindtap='mymind'>关注</view> </block>
+  <block wx:if="{{statu == 2}}"><view class='Navigation-one' style='border-bottom:4rpx solid #FF6347'>关注</view> </block>
+  <block wx:if="{{statu != 3}}"><view class='Navigation-one' bindtap='mycomment'>评论</view> </block>
+  <block wx:if="{{statu == 3}}"><view class='Navigation-one' style='border-bottom:4rpx solid #FF6347'>评论</view> </block>
+</view>

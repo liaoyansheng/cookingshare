@@ -18,29 +18,49 @@
 </view>
 
 <view class='flex-row' style='border-bottom: 2rpx solid #F2F2F2;'>
-  <view class='content-col'>
-    <text>0</text>
+  <view class='content-col' bindtap='topersonal'>
+    <text>6</text>
     <text>收藏</text>
   </view>
-  <view class='content-col text'>
-    <text>0</text>
+  <view class='content-col text' bindtap='topersonal'>
+    <text>6</text>
     <text>关注</text>
   </view>
-  <view class='content-col'>
-    <text>0</text>
+  <view class='content-col' bindtap='topersonal'>
+    <text>6</text>
     <text>评论</text>  
   </view>
 </view>
+<view class='setup-title'>个人足迹</view>
+<view class='setup-usercall'>
+  <image class='icon' src='/image/icon/myshare.png'></image>
+  <text style='width:600rpx;'>我的分享</text>
+  <text style="color:#bfbfbf;">></text>
+</view>
+<view class='setup-usercall'>
+  <image class='icon' src='/image/icon/share.png'></image>
+  <text style='width:600rpx;'>上传作品</text>
+  <text style="color:#bfbfbf;">></text>
+</view>
+<view class='setup-usercall'>
+  <image class='icon' src='/image/icon/visithistory.png'></image>
+  <text style='width:600rpx;'>浏览历史</text>
+  <text style="color:#bfbfbf;">></text>
+</view>
 
-<view class='setup-usercall'>我的黑暗料理</view>
+<view class='setup-title'>更多</view>
 
-<view class='setup-title'>设置</view>
-<view class='setup-usercall'>用户反馈</view>
-<view class='setup-usercall'>用户反馈</view>
-<view class='setup-usercall'>用户反馈</view>
+<view class='setup-usercall'>
+  <image class='icon' src='/image/icon/fankui.png'></image>
+  <text style='width:600rpx;'>意见反馈</text>
+  <text style="color:#bfbfbf;">></text>  
+</view>
 
-
-
+<view class='setup-usercall'>
+  <image class='icon' src='/image/icon/wechat.png'></image>
+  <text style='width:600rpx;'>联系开发者</text>
+  <text style="color:#bfbfbf;">></text>
+</view>
 
 
 </view>

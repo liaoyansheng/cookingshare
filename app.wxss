@@ -8,3 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+}
