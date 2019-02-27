@@ -18,17 +18,17 @@
 </view>
 
 <view class='flex-row' style='border-bottom: 2rpx solid #F2F2F2;'>
-  <view class='content-col' bindtap='topersonal'>
+  <view class='content-col' data-statu='1' bindtap='topersonal'>
     <text>6</text>
     <text>收藏</text>
   </view>
-  <view class='content-col text' bindtap='topersonal'>
+  <view class='content-col text' data-statu='2' bindtap='topersonal'>
     <text>6</text>
     <text>关注</text>
   </view>
-  <view class='content-col' bindtap='topersonal'>
+  <view class='content-col' data-statu='3' bindtap='topersonal'>
     <text>6</text>
-    <text>评论</text>  
+    <text>评论</text>
   </view>
 </view>
 <view class='setup-title'>个人足迹</view>
@@ -61,6 +61,6 @@
   <text style='width:600rpx;'>联系开发者</text>
   <text style="color:#bfbfbf;">></text>
 </view>
-
+<button open-type="contact">进入客服会话</button>
 
 </view>

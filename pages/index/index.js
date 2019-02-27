@@ -14,9 +14,10 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //收藏、关注、评论
-  topersonal:function(){
+  topersonal:function(e){
+    let statu = e.currentTarget.dataset.statu
     wx:wx.navigateTo({
-      url: '../personal/personal',
+      url: '../personal/personal?statu='+statu,
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},
