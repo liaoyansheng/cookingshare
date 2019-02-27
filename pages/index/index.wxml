@@ -50,17 +50,19 @@
 
 <view class='setup-title'>更多</view>
 
+<button open-type="contact" class='contact'>
 <view class='setup-usercall'>
   <image class='icon' src='/image/icon/fankui.png'></image>
   <text style='width:600rpx;'>意见反馈</text>
   <text style="color:#bfbfbf;">></text>  
 </view>
+</button>
 
 <view class='setup-usercall'>
   <image class='icon' src='/image/icon/wechat.png'></image>
   <text style='width:600rpx;'>联系开发者</text>
   <text style="color:#bfbfbf;">></text>
 </view>
-<button open-type="contact">进入客服会话</button>
+
 
 </view>

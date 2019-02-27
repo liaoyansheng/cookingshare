@@ -57,6 +57,11 @@ image.quiet {
   display: flex;
   flex-flow: row wrap;
 }
+.foodpage1{
+  width: 750rpx;
+  display: flex;
+  flex-flow: row wrap;
+}
 .content{
   width: 345rpx;
   box-shadow: 0 6rpx 8rpx #eeeeee;

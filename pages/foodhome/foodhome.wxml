@@ -39,7 +39,7 @@
 </view>
   <view class='thinklikely'><image class='like-icon' src='/image/icon/love.png'></image>猜你喜欢</view>
 
-  <view class="foodpage" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <view class="foodpage1" bindtouchstart="touchStart" bindtouchend="touchEnd">
   <view class='content'>
     <image class='content-img' src='/image/01.jpg' mode='widthFix'></image>
     <view class='content-title'>巧克力牛轧糖</view>
@@ -57,7 +57,7 @@
     </view>
   </view>
   <view class='content'>
-    <image class='content-img1' src='/image/02.jpg'></image>
+    <image class='content-img1' src='/image/02.jpg' mode='widthFix'></image>
     <view class='content-title'>巧克力牛轧糖</view>
     <view class='content-more'>
       <text>66个赞</text>
@@ -65,7 +65,7 @@
     </view>
   </view>
     <view class='content'>
-    <image class='content-img' src='/image/01.jpg'></image>
+    <image class='content-img' src='/image/01.jpg' mode='widthFix'></image>
     <view class='content-title'>巧克力牛轧糖</view>
     <view class='content-more'>
       <text>66个赞</text>

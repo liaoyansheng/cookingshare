@@ -78,3 +78,13 @@
   background-color: #FFF;
   border-bottom: 2rpx solid #F2F2F2;
 }
+.contact{
+  background-color: #FFF;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  text-align:left;
+}
+.contact::after{
+ border: #FFF solid;
+}
