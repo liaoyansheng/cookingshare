@@ -2,7 +2,7 @@
 .searchView{
   position: fixed;
   top:0rpx;
-  background-color: #FF6347;
+  background-color: #F3090D;
   width:750rpx;
   height:108rpx;
   padding:1rpx;

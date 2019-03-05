@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+
+    "navigationBarBackgroundColor": "#F3090D",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "搜索",
+    "navigationBarTextStyle": "white"
+
+  
+}

@@ -37,9 +37,9 @@
   <text style='width:600rpx;'>我的分享</text>
   <text style="color:#bfbfbf;">></text>
 </view>
-<view class='setup-usercall'>
+<view class='setup-usercall' bindtap='toCookMethod'>
   <image class='icon' src='/image/icon/share.png'></image>
-  <text style='width:600rpx;'>上传作品</text>
+  <text style='width:600rpx;'>上传攻略</text>
   <text style="color:#bfbfbf;">></text>
 </view>
 <view class='setup-usercall'>

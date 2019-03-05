@@ -17,20 +17,21 @@
   padding: 20rpx;
 }
 .genre{
-  height:177rpx;
+  display: flex;
+  flex-direction: column;
+  height:207rpx;
   width: 177rpx;
 }
 .genre image{
   height:157rpx;
   width: 157rpx;
-  margin: 0rpx 20rpx 20rpx 0rpx;
+  margin: 0rpx 20rpx 0rpx 0rpx;
   /* filter: saturate(120%); */
 }
-.genre image text{
-  position: relative;
-  top:-50rpx;
-  left:32rpx;
-  font-weight:600;
-  color:#FFFFFF;
+.className{
+  width: 157rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align:center;
   font-size:30rpx;
 }

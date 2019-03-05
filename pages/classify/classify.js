@@ -12,6 +12,12 @@ Page({
   data: {
 
   },
+  //分类搜索列表
+  toCookinglist:function(){
+    wx.navigateTo({
+      url: '../Cookinglist/Cookinglist',
+    })
+  },
   // 触摸开始事件
   touchStart: function (e) {
     touchDot = e.touches[0].pageX; // 获取触摸时的原点

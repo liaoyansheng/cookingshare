@@ -23,13 +23,18 @@ Page({
       complete: function(res) {},
     })
   },
-
-  //事件处理函数
-  bindViewTap: function() {
+  //上传攻略
+  toCookMethod:function(){
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../CookMethod/CookMethod',
     })
   },
+  //事件处理函数
+  // bindViewTap: function() {
+  //   wx.navigateTo({
+  //     url: '../logs/logs'
+  //   })
+  // },
   onLoad: function () {
     var that = this;
     wx.removeTabBarBadge({
@@ -129,4 +134,10 @@ Page({
     //   }
     // })
   },
+  /**
+ * 用户点击右上角分享
+ */
+  onShareAppMessage: function () {
+
+  }
 })

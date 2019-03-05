@@ -4,10 +4,12 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/classify/classify",
-    "pages/personal/personal"
+    "pages/Cookinglist/Cookinglist",
+    "pages/personal/personal",
+    "pages/CookMethod/CookMethod"
   ],
   "window":{
-    "navigationBarBackgroundColor":"#FF6347",
+    "navigationBarBackgroundColor":"#F3090D",
     "backgroundTextStyle":"light",
     "navigationBarTitleText": "美食分享",
     "navigationBarTextStyle":"white"

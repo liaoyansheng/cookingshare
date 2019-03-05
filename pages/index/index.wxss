@@ -10,7 +10,7 @@
   align-items: center;
   width: 750rpx;
   height: 360rpx;
-  background: url('https://www.liaoyansheng.top/05.jpg');
+  background: url('https://zhipai.oss-cn-shenzhen.aliyuncs.com/20190305/20190305113550ECE4.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -84,6 +84,7 @@
   margin: 0;
   font-size: inherit;
   text-align:left;
+  border-bottom: 2rpx solid #F2F2F2;
 }
 .contact::after{
  border: #FFF solid;

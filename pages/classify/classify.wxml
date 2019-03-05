@@ -6,35 +6,35 @@
     <text>热门分类</text>
   </view>
   <view class='allgenre'>
-    <view class='genre'>
+    <view class='genre' bindtap='toCookinglist'>
       <image src="/image/classify/01.jpg">
-      <text>家常菜</text>
       </image>
+      <view class='className'>家常菜</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/02.jpg">
-      <text>肉类</text>
       </image>
+      <view class='className'>肉类</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/03.jpg">
-      <text>蔬菜</text>
       </image>
+      <view class='className'>蔬菜</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/04.jpg">
-      <text>汤类</text>
       </image>
+      <view class='className'>汤类</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/05.jpg">
-      <text>粥类</text>
       </image>
+      <view class='className'>粥类</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/06.jpg">
-      <text>水产</text>
       </image>
+      <view class='className'>水产</view>
     </view>        
   </view>
   <view class='title'>
@@ -44,38 +44,38 @@
   <view class='allgenre'>
     <view class='genre'>
       <image src="/image/classify/07.jpg">
-        <text>粤菜</text>
       </image>
+      <view class='className'>粤菜</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/09.jpg">
-        <text>湘菜</text>
       </image>
+      <view class='className'>湘菜</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/10.jpg">
-      <text>川菜</text>
       </image>
+      <view class='className'>川菜</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/11.jpg">
-      <text>鲁菜</text>
       </image>
+      <view class='className'>鲁菜</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/12.jpg">
-      <text>苏菜</text>
       </image>
+      <view class='className'>苏菜</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/13.jpg">
-      <text>浙菜</text>
       </image>
+      <view class='className'>浙菜</view>
     </view> 
     <view class='genre'>
       <image src="/image/classify/14.jpg">
-     <text>徽菜</text> 
      </image>
+     <view class='className'>徽菜</view>
     </view>             
   </view> 
   <view class='title'>
@@ -84,29 +84,29 @@
   </view>
   <view class='allgenre'>
     <view class='genre'>
-      <image src="/image/classify/15.jpg">
-      <text>自制</text> 
+      <image src="/image/classify/15.jpg"> 
       </image>
+      <view class='className'>自制</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/16.jpg">
-      <text>野餐</text>
       </image>
+      <view class='className'>野餐</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/17.jpg">
-      <text>黑暗料理</text>
       </image>
+      <view class='className'>黑暗料理</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/18.jpg">
-      <text>重口味</text>
       </image>
+      <view class='className'>重口味</view>
     </view>
     <view class='genre'>
       <image src="/image/classify/01.jpg">
-      <text>小清新</text>
       </image>
+      <view class='className'>小清新</view>
     </view>
        
   </view>  

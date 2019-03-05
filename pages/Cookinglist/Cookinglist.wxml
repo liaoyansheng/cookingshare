@@ -1,0 +1,75 @@
+
+<!-- 搜索框 -->
+<view class='searchView'>
+  <view class='search'>
+    <icon type="search" size="20"/>
+    <input class='searchinput' placeholder="搜搜看" confirm-type="search" bindconfirm="searchRoom"></input>
+  </view>
+</view>
+<view class='searchView_copy'></view>
+<!-- 搜索框 -->
+<!-- 排序条件 -->
+<view class='search_more'>
+  <view wx:if="{{search_more != 1}}" class='search_more_check'>综合</view>
+  <view wx:if="{{search_more == 1}}" class='search_more_check' style='color:#000;'>综合</view>
+  <view wx:if="{{search_more != 2}}" class='search_more_check'>浏览最多</view>
+  <view wx:if="{{search_more == 2}}" class='search_more_check' style='color:#000;'>浏览最多</view>
+  <view wx:if="{{search_more != 3}}" class='search_more_check'>点赞最多</view>
+  <view wx:if="{{search_more == 3}}" class='search_more_check' style='color:#000;'>点赞最多</view>
+</view>
+<view class='search_more1'></view>
+<!-- 排序条件 -->
+<view class='flex-row'>
+  <image class='cook_img' src='../../image/02.jpg'></image>
+  <view class='flex-column'>
+    <view class='cook_name'>抹茶蛋糕</view>
+    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
+    <view class='cook_people'>廖雁生</view>
+    <view class='cook_msg'>999人看过　999收藏</view>
+  </view>
+</view>
+<view class='flex-row'>
+  <image class='cook_img' src='../../image/02.jpg'></image>
+  <view class='flex-column'>
+    <view class='cook_name'>抹茶蛋糕</view>
+    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
+    <view class='cook_people'>廖雁生</view>
+    <view class='cook_msg'>999人看过·999收藏</view>
+  </view>
+</view>
+<view class='flex-row'>
+  <image class='cook_img' src='../../image/02.jpg'></image>
+  <view class='flex-column'>
+    <view class='cook_name'>抹茶蛋糕</view>
+    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
+    <view class='cook_people'>廖雁生</view>
+    <view class='cook_msg'>999人看过·999收藏</view>
+  </view>
+</view>
+<view class='flex-row'>
+  <image class='cook_img' src='../../image/02.jpg'></image>
+  <view class='flex-column'>
+    <view class='cook_name'>抹茶蛋糕</view>
+    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
+    <view class='cook_people'>廖雁生</view>
+    <view class='cook_msg'>999人看过·999收藏</view>
+  </view>
+</view>
+<view class='flex-row'>
+  <image class='cook_img' src='../../image/02.jpg'></image>
+  <view class='flex-column'>
+    <view class='cook_name'>抹茶蛋糕</view>
+    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
+    <view class='cook_people'>廖雁生</view>
+    <view class='cook_msg'>999人看过·999收藏</view>
+  </view>
+</view>
+<view class='flex-row'>
+  <image class='cook_img' src='../../image/02.jpg'></image>
+  <view class='flex-column'>
+    <view class='cook_name'>抹茶蛋糕</view>
+    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
+    <view class='cook_people'>廖雁生</view>
+    <view class='cook_msg'>999人看过·999收藏</view>
+  </view>
+</view>
