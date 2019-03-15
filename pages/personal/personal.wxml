@@ -7,3 +7,43 @@
   <block wx:if="{{statu != 3}}"><view class='Navigation-one' bindtap='mycomment'>评论</view> </block>
   <block wx:if="{{statu == 3}}"><view class='Navigation-one' style='border-bottom:4rpx solid #FF6347'>评论</view> </block>
 </view>
+
+<view class='Navigation-copy'></view>
+
+<!-- 收藏 -->
+<block wx:if="{{statu == 1}}">
+<view class='content'>
+  <image class='cook_img' mode="widthFix" src='../../image/02.jpg'></image>
+  <view class='content-msg'>
+    <view class='content_name'>奶油巧克力蛋糕</view>
+    <view class='content_col'>999人收藏</view>
+  </view>
+</view>
+<view class='content'>
+  <image class='cook_img' mode="widthFix" src='../../image/02.jpg'></image>
+  <view class='content-msg'>
+    <view class='content_name'>奶油巧克力蛋糕</view>
+    <view class='content_col'>999人收藏</view>
+  </view>
+</view>
+<view class='content'>
+  <image class='cook_img' mode="widthFix" src='../../image/02.jpg'></image>
+  <view class='content-msg'>
+    <view class='content_name'>奶油巧克力蛋糕</view>
+    <view class='content_col'>999人收藏</view>
+  </view>
+</view>
+</block>
+<!-- 收藏 -->
+
+<!-- 关注 -->
+<block wx:if="{{statu == 2}}">
+
+</block>
+<!-- 关注 -->
+
+<!-- 评论 -->
+<block wx:if="{{statu == 3}}">
+
+</block>
+<!-- 评论 -->

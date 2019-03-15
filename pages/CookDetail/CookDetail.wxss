@@ -1,0 +1,4 @@
+/* pages/CookDetail/CookDetail.wxss */
+.cook_img{
+  width: 750rpx;
+}

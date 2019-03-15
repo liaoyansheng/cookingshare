@@ -17,6 +17,7 @@
   </block>
 </swiper>
 <!-- 轮播图 -->
+
 <view class="foodpage" bindtouchstart="touchStart" bindtouchend="touchEnd">
 
 <!-- 推荐 -->
@@ -35,12 +36,14 @@
   </view>
   <image class='message-img' src='/image/01.jpg'></image>  
 </view>
-<!-- 推荐 -->
 </view>
+<!-- 推荐 -->
+
+<!-- 猜你喜欢 -->
   <view class='thinklikely'><image class='like-icon' src='/image/icon/love.png'></image>猜你喜欢</view>
 
   <view class="foodpage1" bindtouchstart="touchStart" bindtouchend="touchEnd">
-  <view class='content'>
+  <view class='content' bindtap='toCookDetail'>
     <image class='content-img' src='/image/01.jpg' mode='widthFix'></image>
     <view class='content-title'>巧克力牛轧糖</view>
     <view class='content-more'>
@@ -72,5 +75,7 @@
       <text>　·　999人收藏</text>
     </view>
   </view>
+<!-- 猜你喜欢 -->
+
 
 </view>

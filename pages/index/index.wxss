@@ -4,6 +4,7 @@
   width: 100vw;
   background-color: #F2F2F2;
 }
+
 .selfinfo{
   display: flex;
   flex-direction: column;
@@ -88,4 +89,13 @@
 }
 .contact::after{
  border: #FFF solid;
+}
+
+
+
+
+
+
+.light{
+  background:#D3D3D3;
 }

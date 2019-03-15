@@ -1,15 +1,46 @@
 /* pages/personal/personal.wxss */
 .Navigation{
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width:750rpx;
   line-height: 100rpx;
   border-bottom: 2rpx solid #D3D3D3;
+  background: #FFF;
+}
+.Navigation-copy{
+  width:750rpx;
+  height: 100rpx;
 }
 .Navigation-one{
   width: 250rpx;
   line-height: 100rpx;
   text-align: center; 
   font-size: 36rpx;
+}
+.content{
+  width: 670rpx;
+  padding: 40rpx;
+  border-bottom:2rpx solid #DCDCDC;
+}
+.cook_img{
+  width: 670rpx;
+}
+.content-msg{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.content_name{
+  width: 470rpx;
+  font-size: 36rpx;
+}
+.content_col{
+  width: 200rpx;
+  font-size: 30rpx;
+  color: #808080;
+  text-align: right;
 }

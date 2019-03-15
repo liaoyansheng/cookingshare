@@ -18,7 +18,14 @@ Page({
     swiperIndex: 0
   },
 
+  //攻略详情
+  toCookDetail:function(){
+    wx.navigateTo({
+      url: '../CookDetail/CookDetail',
+    })
+  },
 
+  //轮播图
   bindchange(e) {
     this.setData({
       swiperIndex: e.detail.current

@@ -1,0 +1,3 @@
+<!--pages/CookDetail/CookDetail.wxml-->
+<image class='cook_img' mode="widthFix" src='../../image/02.jpg'></image>
+

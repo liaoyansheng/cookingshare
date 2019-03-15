@@ -6,7 +6,8 @@
     "pages/classify/classify",
     "pages/Cookinglist/Cookinglist",
     "pages/personal/personal",
-    "pages/CookMethod/CookMethod"
+    "pages/CookMethod/CookMethod",
+    "pages/CookDetail/CookDetail"
   ],
   "window":{
     "navigationBarBackgroundColor":"#F3090D",
