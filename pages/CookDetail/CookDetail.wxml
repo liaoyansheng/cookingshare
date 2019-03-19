@@ -1,3 +1,51 @@
 <!--pages/CookDetail/CookDetail.wxml-->
 <image class='cook_img' mode="widthFix" src='../../image/02.jpg'></image>
 
+<view class='cook_title'>
+  <view class='cook_name'>水果奶油蛋糕</view>
+  <view class='cook_score'>8.5综合评分·8个好友分享过</view>
+</view>
+
+<view class='cook_author'>
+  <image class='cook_author_head' src='{{userInfo.avatarUrl}}'></image>
+  <view class='flex-column' style='margin-left:20rpx;'>
+    <view class='author'>作者</view>
+    <view class='author_name'>廖雁生</view>
+  </view>
+</view>
+
+<view class='cook_introduction'>
+轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
+</view>
+<view class='cook_introduction'>
+轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
+</view>
+<view class='cook_introduction'>
+轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
+</view>
+<view class='cook_introduction'>
+轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
+</view>
+<view class='cook_introduction'>
+轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
+</view>
+
+<view class='readyfood'>
+  准备食材
+</view>
+
+<view class='bottom1'></view>
+<view class='flex-row bottom'>
+  <view class='bottom-btn'>
+    <image class='icon' src='/image/icon/col.png'></image>
+    收藏
+  </view>
+  <view class='bottom-btn'>
+    <image class='icon' src='/image/icon/photo.png'></image>
+    分享
+  </view>
+  <view class='bottom-btn'>
+    <image class='icon' src='/image/icon/post.png'></image>
+    转发
+  </view>
+</view>

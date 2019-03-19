@@ -5,17 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tempFilePaths:''
   },
-  chooseVideo:function(){
-    const that = this
-    wx.chooseVideo({
-      sourceType: ['album', 'camera'],
-      maxDuration: 60,
-      camera: ['front', 'back'],
+  choose:function(){
+    let that = this;
+    wx.chooseImage({
       success(res) {
+        const tempFilePaths = res.tempFilePaths;
         that.setData({
-          src: res.tempFilePath
+          tempFilePaths: tempFilePaths
+        })
+        wx.uploadFile({
+          url: 'https://www.liaoyansheng.top/upload', // 仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'file',
+          formData: {
+            user: 'test'
+          },
+          success(res) {
+            const data = res.data;
+            console.log(res);
+          }
         })
       }
     })
