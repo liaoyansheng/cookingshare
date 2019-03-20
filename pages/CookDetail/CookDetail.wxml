@@ -14,26 +14,96 @@
   </view>
 </view>
 
+<!-- 美食介绍 -->
 <view class='cook_introduction'>
 轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
 </view>
-<view class='cook_introduction'>
-轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
-</view>
-<view class='cook_introduction'>
-轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
-</view>
-<view class='cook_introduction'>
-轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
-</view>
-<view class='cook_introduction'>
-轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
-</view>
+<!-- 美食介绍 -->
 
+<!-- 准备食材 -->
 <view class='readyfood'>
   准备食材
 </view>
+<view class='readyarticle'>
+  <text class='article'>奶油奶酪</text>
+  <text class='article' style='text-align:center;'>125克</text>
+</view>
+<view class='readyarticle'>
+  <text class='article'>奶油奶酪</text>
+  <text class='article' style='text-align:center;'>125克</text>
+</view>
+<view class='readyarticle'>
+  <text class='article'>奶油奶酪</text>
+  <text class='article' style='text-align:center;'>125克</text>
+</view>
+<view class='readyarticle'>
+  <text class='article'>奶油奶酪</text>
+  <text class='article' style='text-align:center;'>125克</text>
+</view>
+<!-- 准备食材 -->
 
+<!-- 步骤 -->
+<view class='step'>
+  <view class='step-title'>步骤一</view>
+  <image class='step-pic' mode="widthFix" src='../../image/02.jpg'></image>
+  <view class='step-Description'>
+制作这款蛋糕可以使用固底模，也可以使用活底模。如果是活底模，可以将活底取出，用锡纸包上，便于将蛋糕整个脱模。如果是固底模，可以在底部垫一张大小合适的油纸或锡纸
+  </view>
+</view>
+<view class='step'>
+  <view class='step-title'>步骤一</view>
+  <image class='step-pic' mode="widthFix" src='../../image/02.jpg'></image>
+  <view class='step-Description'>
+制作这款蛋糕可以使用固底模，也可以使用活底模。如果是活底模，可以将活底取出，用锡纸包上，便于将蛋糕整个脱模。如果是固底模，可以在底部垫一张大小合适的油纸或锡纸
+  </view>
+</view>
+<view class='step'>
+  <view class='step-title'>步骤一</view>
+  <image class='step-pic' mode="widthFix" src='../../image/02.jpg'></image>
+  <view class='step-Description'>
+制作这款蛋糕可以使用固底模，也可以使用活底模。如果是活底模，可以将活底取出，用锡纸包上，便于将蛋糕整个脱模。如果是固底模，可以在底部垫一张大小合适的油纸或锡纸
+  </view>
+</view>
+<!-- 步骤 -->
+
+<!-- 网友分享 -->
+<swiper class='cookShare'>
+  <swiper-item class='cookShare-item'>
+    <image class='cookShare-img' src='../../image/02.jpg'></image>
+    <view class='flex-row'>
+      <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+      <view class='cookShare-user-name'>廖雁生</view>
+    </view>
+  </swiper-item>
+  <swiper-item class='cookShare-item'>
+    <image class='cookShare-img' src='../../image/02.jpg'></image>
+    <view class='flex-row'>
+      <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+      <view class='cookShare-user-name'>廖雁生</view>
+    </view>
+  </swiper-item>  
+  <swiper-item class='cookShare-item'>
+    <image class='cookShare-img' src='../../image/02.jpg'></image>
+    <view class='flex-row'>
+      <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+      <view class='cookShare-user-name'>廖雁生</view>
+    </view>
+  </swiper-item>
+  <swiper-item class='cookShare-item'>
+    <image class='cookShare-img' src='../../image/02.jpg'></image>
+    <view class='flex-row'>
+      <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+      <view class='cookShare-user-name'>廖雁生</view>
+    </view>
+  </swiper-item>    
+</swiper>
+
+<!-- 网友分享 -->
+
+
+
+
+<!-- 底部功能键 -->
 <view class='bottom1'></view>
 <view class='flex-row bottom'>
   <view class='bottom-btn'>
@@ -42,7 +112,7 @@
   </view>
   <view class='bottom-btn'>
     <image class='icon' src='/image/icon/photo.png'></image>
-    分享
+    拍照分享
   </view>
   <view class='bottom-btn'>
     <image class='icon' src='/image/icon/post.png'></image>

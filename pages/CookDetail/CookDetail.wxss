@@ -14,9 +14,10 @@
 }
 .cook_name{
   height:60rpx;
-  line-height:60rpx;  
+  line-height:60rpx; 
+  font-family:MicrosoftYaHei; 
   font-size: 36rpx;
-  font-weight: 600;
+  font-weight: 900;
   text-align: center;
 }
 .cook_score{
@@ -51,7 +52,7 @@
   width: 710rpx;
   margin:20rpx;
   font-size:36rpx;
-  font-weight: 600;
+  font-weight: 700;
   text-align: left;
 }
 .cook_introduction{
@@ -85,4 +86,69 @@
 }
 .bottom-word{
   height:100rpx; 
+}
+.readyarticle{
+  width: 710rpx;
+  height: 48rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 48rpx;
+  margin:20rpx;
+  font-size:30rpx;
+  border-bottom:2rpx solid #F2F2F2;
+}
+.article{
+  width:350rpx;
+  text-align: center;
+}
+.step{
+  width: 710rpx;
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  border-bottom:4rpx solid #F2F2F2;
+}
+.step-title{
+  width: 670rpx;
+  font-size:36rpx;
+  font-weight: 700;
+  text-align: left;  
+  margin:0 20rpx;
+}
+.step-pic{
+  width:670rpx;
+  margin:20rpx;
+}
+.step-Description{
+  width:670rpx;
+  margin:20rpx;
+  font-size:30rpx;
+}
+.cookShare{
+  width: 730rpx;
+  margin:20rpx;
+  margin-right:0;
+}
+.cookShare-item{
+  width: 300rpx !important;
+  height:400rpx !important;
+  display: flex;
+  flex-direction: column;
+  margin-right:40rpx;
+  border:2rpx solid #F2F2F2;
+
+}
+.cookShare-img{
+  width: 300rpx;
+  height: 300rpx;
+}
+.cookShare-user-head{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.cookShare-user-head{
+  font-size: 24rpx;
+  color:#808080;
 }

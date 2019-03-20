@@ -7,7 +7,7 @@
 .title{
   width: 750rpx;
   font-size: 30rpx;
-  font-weight: 600;
+  font-weight: 900;
   padding: 20rpx;
 }
 .allgenre{
@@ -26,6 +26,7 @@
   height:157rpx;
   width: 157rpx;
   margin: 0rpx 20rpx 0rpx 0rpx;
+  border-radius:20rpx;
   /* filter: saturate(120%); */
 }
 .className{
