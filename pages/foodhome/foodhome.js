@@ -17,11 +17,31 @@ Page({
     ],
     swiperIndex: 0
   },
+  //搜索跳转
+  toCookinglist:function(e){
+    if (e.detail.value != ''){
+      let name = e.detail.value;
+      wx.navigateTo({
+        url: '../Cookinglist/Cookinglist?name=' + name,
+      })
+    }else{
+      wx.navigateTo({
+        url: '../Cookinglist/Cookinglist'
+      })
+    }
 
-  //攻略详情
-  toCookDetail:function(){
+  },
+  //搜索跳转
+  toCookinglist2: function (e) {
+      wx.navigateTo({
+        url: '../Cookinglist/Cookinglist'
+      })
+  },
+  //美食菜谱详情
+  toCookDetail:function(e){
+    let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '../CookDetail/CookDetail',
+      url: '../CookDetail/CookDetail?id='+id,
     })
   },
 
@@ -70,7 +90,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
+
 
   },
 
@@ -97,6 +117,27 @@ Page({
     flag_hd = true;    //重新进入页面之后，可以再次执行滑动切换页面代码
     clearInterval(interval); // 清除setInterval
     time = 0;
+
+    let that = this;
+    //展示菜谱数据
+    wx.request({
+      url: 'https://www.liaoyansheng.top/api/foodlist/showMenuList',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+      },
+      dataType: 'json',
+      success(res) {
+        let food = res.data.filter(item => item.menu_step = JSON.parse(item.menu_step));
+        console.log(food);
+        that.setData({
+          foodlist: food
+        })
+      }
+    }) 
+
   },
 
   /**

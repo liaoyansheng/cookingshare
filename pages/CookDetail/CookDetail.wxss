@@ -32,6 +32,7 @@
   margin:20rpx;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .cook_author_head{
   width: 100rpx;
@@ -48,6 +49,26 @@
   height:30rpx;
   margin-bottom:24rpx;
 }
+.attent{
+  height: 40rpx;
+  line-height: 40rpx;
+  border:2rpx solid #d81e06;
+  border-radius: 10rpx;
+  color: #d81e06;
+  text-align: center;
+  padding:10rpx 20rpx;
+  margin:20rpx 0;
+}
+.attented{
+  height: 40rpx;
+  line-height: 40rpx;
+  border:2rpx solid #8a8a8a;
+  border-radius: 10rpx;
+  color: #8a8a8a;
+  text-align: center;
+  padding:10rpx 20rpx;
+  margin:20rpx 0;
+}
 .readyfood{
   width: 710rpx;
   margin:20rpx;
@@ -63,11 +84,10 @@
 }
 .bottom1{
   width: 750rpx;
-  height: 100rpx;
+  height: 150rpx;
 }
 .bottom{
   width: 750rpx;
-  height: 100rpx;
   position: fixed;
   bottom: 0;
   border-top:4rpx solid #F2F2F2;
@@ -78,9 +98,12 @@
   height:38rpx; 
 }
 .bottom-btn{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   width: 250rpx;
   height: 100rpx;
-  line-height: 100rpx;
   text-align: center;
   font-size:32rpx;
 }
@@ -89,19 +112,13 @@
 }
 .readyarticle{
   width: 710rpx;
-  height: 48rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   line-height: 48rpx;
   margin:20rpx;
   font-size:30rpx;
+  text-decoration:underline;
   border-bottom:2rpx solid #F2F2F2;
 }
-.article{
-  width:350rpx;
-  text-align: center;
-}
+
 .step{
   width: 710rpx;
   padding:10px;
@@ -125,19 +142,31 @@
   margin:20rpx;
   font-size:30rpx;
 }
+.cookShare_title{
+  width:710rpx;
+  margin:20rpx;
+  font-size:36rpx;
+  font-weight:700;
+  text-align:left;
+}
 .cookShare{
   width: 730rpx;
+  height:480rpx;
   margin:20rpx;
   margin-right:0;
 }
+.cookShare-swiper{
+  width: 340rpx !important;
+  height:480rpx !important;
+}
 .cookShare-item{
-  width: 300rpx !important;
-  height:400rpx !important;
+  width: 300rpx;
+  height:460rpx;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
   margin-right:40rpx;
-  border:2rpx solid #F2F2F2;
-
+  border:4rpx solid #F2F2F2;
+  border-bottom:4rpx solid #F2F2F2;
 }
 .cookShare-img{
   width: 300rpx;
@@ -147,8 +176,97 @@
   width: 50rpx;
   height: 50rpx;
   border-radius: 50%;
+  margin: 10rpx;
 }
 .cookShare-user-head{
   font-size: 24rpx;
   color:#808080;
+}
+.cookShare-user-name{
+ height: 70rpx;
+ line-height: 70rpx;
+ font-size:28rpx;
+ text-align: center;
+}
+.cookShare-word{
+  height: 80rpx;
+  line-height:40rpx;
+  width: 280rpx;
+  font-size:26rpx;
+  margin:10rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+.comment{
+  width: 710rpx;
+  margin: 20rpx;
+}
+.comment_content{
+  width: 690rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  margin:10rpx;
+}
+.commodity_screen {
+  width: 750rpx;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 1000;
+}
+.commodity_attr_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 670rpx;
+  height: 500rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 10%;
+  left: 40rpx;
+  z-index: 2000;
+  background: #FFFFFF;
+  border-radius: 10rpx;
+  font-size:30rpx;
+  font-weight: 600;
+}
+.comment_title{
+  width: 670rpx;
+  line-height:60rpx;
+  text-align:center;
+  /* border-bottom:4rpx solid #A9A9A9; */
+}
+.comment_text{
+  width: 630rpx;
+  margin:60rpx 20rpx;
+  height: 200rpx;
+  border:4rpx solid #F2F2F2;
+  border-radius:10rpx;
+  background:#F2F2F2;
+}
+.comment_cancel{
+  margin-right: 60rpx;
+}
+.comment_keep{
+  color: #fff;
+  background: #d81e06;
+}
+.contact{
+  background-color: #FFF;
+  padding: 0;
+  margin: 0;
+  line-height: none;
+  font-size: inherit;
+}
+.contact::after{
+ border: none;
 }

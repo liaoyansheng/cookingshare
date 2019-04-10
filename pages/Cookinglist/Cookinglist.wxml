@@ -2,74 +2,36 @@
 <!-- 搜索框 -->
 <view class='searchView'>
   <view class='search'>
-    <icon type="search" size="20"/>
-    <input class='searchinput' placeholder="搜搜看" confirm-type="search" bindconfirm="searchRoom"></input>
+    <icon type="search" size="20" bindtap='search'/>
+    <input class='searchinput' placeholder="搜搜看" value='{{name}}' confirm-type="search" bindconfirm="searchMenu" bindblur='searchWork'></input>
   </view>
 </view>
 <view class='searchView_copy'></view>
 <!-- 搜索框 -->
 <!-- 排序条件 -->
 <view class='search_more'>
-  <view wx:if="{{search_more != 1}}" class='search_more_check'>综合</view>
-  <view wx:if="{{search_more == 1}}" class='search_more_check' style='color:#000;'>综合</view>
-  <view wx:if="{{search_more != 2}}" class='search_more_check'>浏览最多</view>
-  <view wx:if="{{search_more == 2}}" class='search_more_check' style='color:#000;'>浏览最多</view>
-  <view wx:if="{{search_more != 3}}" class='search_more_check'>点赞最多</view>
-  <view wx:if="{{search_more == 3}}" class='search_more_check' style='color:#000;'>点赞最多</view>
+  <view wx:if="{{search_more != 1}}" class='search_more_check' bindtap='SearchMore' data-id='1'>综合</view>
+  <view wx:if="{{search_more == 1}}" class='search_more_check' bindtap='SearchMore' data-id='1' style='color:#000;font-weight:700;border-bottom:2rpx solid #F3090D;'>综合</view>
+  <view wx:if="{{search_more != 2}}" class='search_more_check' bindtap='SearchMore' data-id='2'>评论最多</view>
+  <view wx:if="{{search_more == 2}}" class='search_more_check' bindtap='SearchMore' data-id='2' style='color:#000;font-weight:700;border-bottom:2rpx solid #F3090D;'>浏览最多</view>
+  <view wx:if="{{search_more != 3}}" class='search_more_check' bindtap='SearchMore' data-id='3' >点赞最多</view>
+  <view wx:if="{{search_more == 3}}" class='search_more_check' bindtap='SearchMore' data-id='3' style='color:#000;font-weight:700;border-bottom:2rpx solid #F3090D;'>点赞最多</view>
 </view>
 <view class='search_more1'></view>
 <!-- 排序条件 -->
-<view class='flex-row'>
-  <image class='cook_img' src='../../image/02.jpg'></image>
+<block wx:for='{{foodlist}}' wx:key="{{index}}">
+<view class='flex-row' data-id='{{item.id}}' bindtap='toCookDetail'>
+  <image class='cook_img' src='{{item.menu_step[item.menu_step.length-1].pic}}' lazy-load></image>
   <view class='flex-column'>
-    <view class='cook_name'>抹茶蛋糕</view>
-    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
-    <view class='cook_people'>廖雁生</view>
+    <view class='cook_name'>{{item.menu_title}}</view>
+    <view class='cook_method'>{{item.menu_material}}</view>
+    <view class='cook_people'>{{item.name}}</view>
     <view class='cook_msg'>999人看过　999收藏</view>
   </view>
 </view>
-<view class='flex-row'>
-  <image class='cook_img' src='../../image/02.jpg'></image>
-  <view class='flex-column'>
-    <view class='cook_name'>抹茶蛋糕</view>
-    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
-    <view class='cook_people'>廖雁生</view>
-    <view class='cook_msg'>999人看过·999收藏</view>
-  </view>
-</view>
-<view class='flex-row'>
-  <image class='cook_img' src='../../image/02.jpg'></image>
-  <view class='flex-column'>
-    <view class='cook_name'>抹茶蛋糕</view>
-    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
-    <view class='cook_people'>廖雁生</view>
-    <view class='cook_msg'>999人看过·999收藏</view>
-  </view>
-</view>
-<view class='flex-row'>
-  <image class='cook_img' src='../../image/02.jpg'></image>
-  <view class='flex-column'>
-    <view class='cook_name'>抹茶蛋糕</view>
-    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
-    <view class='cook_people'>廖雁生</view>
-    <view class='cook_msg'>999人看过·999收藏</view>
-  </view>
-</view>
-<view class='flex-row'>
-  <image class='cook_img' src='../../image/02.jpg'></image>
-  <view class='flex-column'>
-    <view class='cook_name'>抹茶蛋糕</view>
-    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
-    <view class='cook_people'>廖雁生</view>
-    <view class='cook_msg'>999人看过·999收藏</view>
-  </view>
-</view>
-<view class='flex-row'>
-  <image class='cook_img' src='../../image/02.jpg'></image>
-  <view class='flex-column'>
-    <view class='cook_name'>抹茶蛋糕</view>
-    <view class='cook_method'>鸡蛋、牛奶、面粉、黄油</view>
-    <view class='cook_people'>廖雁生</view>
-    <view class='cook_msg'>999人看过·999收藏</view>
-  </view>
-</view>
+</block>
+<block wx:if='{{foodlist.length==0}}'>
+  <view>暂无搜索结果</view>
+</block>
+
+

@@ -1,0 +1,15 @@
+<!--pages/CookRecord/CookRecord.wxml-->
+<view class='content'>
+
+  <textarea name='' placeholder="记录美食得点点滴滴..." auto-focus auto-height class='text-area'>
+  </textarea>
+
+  <block wx:for="{{img_arr}}" wx:key="{{img_arr}}">
+    <image class='pic_upload' src='{{item}}'></image>
+  </block>
+
+  <image class='pic_upload' src='/image/icon/pic.png' bindtap="chooseimg"></image>
+
+</view>
+
+<button class='release' loading form-type='submit'>发布</button>

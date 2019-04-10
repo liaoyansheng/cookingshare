@@ -10,7 +10,47 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-
+  //写评论
+  writecomment: function () {
+    // 显示遮罩层
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "linear",
+      delay: 0
+    })
+    this.animation = animation
+    animation.translateY(300).step()
+    this.setData({
+      animationData: animation.export(),
+      showModalStatus: true
+    })
+    setTimeout(function () {
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation.export()
+      })
+    }.bind(this), 200)
+  },
+  // 隐藏遮罩层
+  hideView() {
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "linear",
+      delay: 0
+    })
+    this.animation = animation
+    animation.translateY(300).step()
+    this.setData({
+      animationData: animation.export(),
+    })
+    setTimeout(function () {
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation.export(),
+        showModalStatus: false
+      })
+    }.bind(this), 200)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -42,6 +82,29 @@ Page({
         }
       })
     }
+    let id = options.id;
+    //展示菜谱数据
+    wx.request({
+      url: 'https://www.liaoyansheng.top/api/foodlist//Menu',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        id:id
+      },
+      dataType: 'json',
+      success(res) {
+        // console.log(res.data);item.menu_material = JSON.parse(item.menu_material)
+        let food = res.data.filter(item => item.menu_step = JSON.parse(item.menu_step));
+
+        console.log(food);
+        that.setData({
+          array: food[0]
+        })
+      }
+    })
+
   },
 
   /**

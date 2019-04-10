@@ -1,0 +1,26 @@
+/* pages/CookRecord/CookRecord.wxss */
+.content{
+  width: 690rpx;
+  margin:30rpx;
+}
+.release{
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  width: 750rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color:#FFF;
+  background:#F3090D; 
+  font-size:32rpx;
+  border-radius:0;
+}
+.text-area{
+  width: 690rpx;
+  border-bottom:4rpx solid #F2F2F2;
+  padding-bottom:20rpx;
+}
+.pic_upload{
+  width: 230rpx;
+  height: 230rpx;
+}

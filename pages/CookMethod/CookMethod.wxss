@@ -1,1 +1,63 @@
 /* pages/CookMethod/CookMethod.wxss */
+.release{
+  position:fixed;
+  bottom:0;
+  height:100rpx;
+  width:750rpx;
+  line-height:100rpx;
+  text-align:center;
+  color:#FFF;
+  background:#EE1111;
+  font-size:32rpx;
+  border-radius:0;
+  z-index:999;
+}
+.content{
+  width: 710rpx;
+  margin: 20rpx;
+}
+.food-title{
+  height:80rpx;
+  text-align:center;
+  border-bottom: 4rpx solid #F2F2F2;
+}
+.food-introduce{
+  height: 200rpx;
+  width:710rpx;
+  margin:30rpx 0;
+  border-bottom:2rpx solid #F2F2F2;
+}
+.food-material{
+  height:60rpx;
+  width:300rpx;
+  margin:10rpx;
+  border-bottom:2rpx solid #F2F2F2;
+}
+.choose-pic{
+  position: relative;
+  width: 500rpx;
+  height: 420rpx;
+  margin: 0 105rpx;
+}
+.step-one{
+  width:710rpx;
+  margin:30rpx 0;
+  border-bottom:2rpx solid #F2F2F2;  
+}
+.addImg{
+  width:100rpx;
+  height:100rpx;
+  position:fixed;
+  bottom:10%;
+  right:30rpx;
+  background:#bfbfbf;
+  border-radius:50%;
+  z-index:999;
+}
+.deleteimg{
+  position: absolute;
+  top: 0;
+  right: 20rpx;
+  width:30rpx;
+  height:30rpx;
+}

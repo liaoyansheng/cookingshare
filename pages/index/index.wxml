@@ -32,17 +32,17 @@
   </view>
 </view>
 <view class='setup-title'>个人足迹</view>
-<view class='setup-usercall' hover-class='light'>
+<view class='setup-usercall' hover-class='light' bindtap='toCookRecord'>
   <image class='icon' src='/image/icon/myshare.png'></image>
   <text style='width:600rpx;'>我的分享</text>
   <text style="color:#bfbfbf;">></text>
 </view>
 <view class='setup-usercall' hover-class='light' bindtap='toCookMethod'>
   <image class='icon' src='/image/icon/share.png'></image>
-  <text style='width:600rpx;'>上传攻略</text>
+  <text style='width:600rpx;'>上传菜谱</text>
   <text style="color:#bfbfbf;">></text>
 </view>
-<view class='setup-usercall' hover-class='light'>
+<view class='setup-usercall' hover-class='light' bindtap='toBrowseHistory'>
   <image class='icon' src='/image/icon/visithistory.png'></image>
   <text style='width:600rpx;'>浏览历史</text>
   <text style="color:#bfbfbf;">></text>

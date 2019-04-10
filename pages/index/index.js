@@ -23,10 +23,20 @@ Page({
       complete: function(res) {},
     })
   },
+  toCookRecord:function(){
+    wx.navigateTo({
+      url: '../CookRecord/CookRecord',
+    })
+  },
   //上传攻略
   toCookMethod:function(){
     wx.navigateTo({
       url: '../CookMethod/CookMethod',
+    })
+  },
+  toBrowseHistory:function(){
+    wx.navigateTo({
+      url: '../BrowseHistory/BrowseHistory',
     })
   },
   //事件处理函数
@@ -56,7 +66,7 @@ Page({
         })
       }
     } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
+      //在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
           app.globalData.userInfo = res.userInfo
@@ -69,12 +79,34 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
+    console.log(e);
+  
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+    //增加用户
+    wx.request({
+      url: 'https://www.liaoyansheng.top/api/user/addUser',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        name: e.detail.userInfo.nickName,
+        head_img: e.detail.userInfo.avatarUrl
+      },
+      dataType: 'json',
+      success(res) {
+        console.log(res);
+        console.log(res.data[0].id);
+        app.globalData.user = res.data[0];
+
+      }
+    })
+
+
   },
 
   // 触摸开始事件
@@ -113,6 +145,11 @@ Page({
  * 生命周期函数--监听页面显示
  */
   onShow: function () {
+    // console.log(app.globalData.userInfo);
+    // if (app.globalData.user){
+    //   console.log(app.globalData.user);
+    // }
+
     flag_hd = true;    //重新进入页面之后，可以再次执行滑动切换页面代码
     clearInterval(interval); // 清除setInterval
     time = 0;
@@ -124,7 +161,7 @@ Page({
     wx.showTabBarRedDot({
       index: 2,
       success: function (e) {
-        console.log("成功");
+        // console.log("成功");
       }
     });
     // wx.hideTabBarRedDot({

@@ -74,6 +74,9 @@
 }
 .cook_method{
   font-size: 30rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap; 
 }
 .cook_people{
   font-size: 24rpx;

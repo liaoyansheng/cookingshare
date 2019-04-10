@@ -1,8 +1,8 @@
 <!-- 搜索框 -->
 <view class='searchView'>
   <view class='search'>
-    <icon type="search" size="20"/>
-    <input class='searchinput' placeholder="今天想吃什么菜" confirm-type="search" bindconfirm="searchRoom"></input>
+    <icon type="search" size="20" bindtap='toCookinglist2'/>
+    <input class='searchinput' placeholder="今天想吃什么菜" confirm-type="search" bindconfirm="toCookinglist"></input>
   </view>
 </view>
 <view class='searchView_copy'></view>
@@ -40,41 +40,20 @@
 <!-- 推荐 -->
 
 <!-- 猜你喜欢 -->
-  <view class='thinklikely'><image class='like-icon' src='/image/icon/love.png'></image>猜你喜欢</view>
-
+  <view class='thinklikely'>
+    <image class='like-icon' src='/image/icon/love.png'></image>猜你喜欢
+  </view>
   <view class="foodpage1" bindtouchstart="touchStart" bindtouchend="touchEnd">
-  <view class='content' bindtap='toCookDetail'>
-    <image class='content-img' src='/image/01.jpg' mode='widthFix'></image>
-    <view class='content-title'>巧克力牛轧糖</view>
+  <block wx:for="{{foodlist}}" wx:key="{{index}}">
+  <view class='content' data-id='{{item.id}}' bindtap='toCookDetail'>
+    <image class='content-img1' src='{{item.menu_step[item.menu_step.length-1].pic}}'></image>
+    <view class='content-title'>{{item.menu_title}}</view>
     <view class='content-more'>
-      <text>66个赞</text>
+      <text>66个评论</text>
       <text>　·　999人收藏</text>
     </view>
   </view>
-  <view class='content'>
-    <image class='content-img1' src='/image/03.jpg' mode='widthFix'></image>
-    <view class='content-title'>巧克力牛轧糖</view>
-    <view class='content-more'>
-      <text>66个赞</text>
-      <text>　·　999人收藏</text>
-    </view>
-  </view>
-  <view class='content'>
-    <image class='content-img1' src='/image/02.jpg' mode='widthFix'></image>
-    <view class='content-title'>巧克力牛轧糖</view>
-    <view class='content-more'>
-      <text>66个赞</text>
-      <text>　·　999人收藏</text>
-    </view>
-  </view>
-    <view class='content'>
-    <image class='content-img' src='/image/01.jpg' mode='widthFix'></image>
-    <view class='content-title'>巧克力牛轧糖</view>
-    <view class='content-more'>
-      <text>66个赞</text>
-      <text>　·　999人收藏</text>
-    </view>
-  </view>
+  </block>
 <!-- 猜你喜欢 -->
 
 

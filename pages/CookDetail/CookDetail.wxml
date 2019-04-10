@@ -1,22 +1,30 @@
 <!--pages/CookDetail/CookDetail.wxml-->
-<image class='cook_img' mode="widthFix" src='../../image/02.jpg'></image>
+<image class='cook_img' mode="widthFix" src='{{array.menu_step[0].pic}}'></image>
 
 <view class='cook_title'>
-  <view class='cook_name'>水果奶油蛋糕</view>
+  <view class='cook_name'>{{array.menu_title}}</view>
   <view class='cook_score'>8.5综合评分·8个好友分享过</view>
 </view>
 
 <view class='cook_author'>
-  <image class='cook_author_head' src='{{userInfo.avatarUrl}}'></image>
-  <view class='flex-column' style='margin-left:20rpx;'>
-    <view class='author'>作者</view>
-    <view class='author_name'>廖雁生</view>
+  <view class='flex-row'>
+    <image class='cook_author_head' src='{{array.head_img}}'></image>
+    <view class='flex-column' style='margin-left:20rpx;'>
+      <view class='author'>作者</view>
+      <view class='author_name'>{{array.name}}</view>
+    </view>
   </view>
+  <view class='attent'>
+    关注
+  </view>
+  <!-- <view class='attented'>
+    已关注
+  </view> -->
 </view>
 
 <!-- 美食介绍 -->
 <view class='cook_introduction'>
-轻乳酪蛋糕的做法和戚风蛋糕非常类似。只不过减少了面粉用量，并且加入了奶油奶酪。只要戚风蛋糕做好了，做轻乳酪都不会是太难的事情。
+{{array.menu_introduction}}
 </view>
 <!-- 美食介绍 -->
 
@@ -25,81 +33,121 @@
   准备食材
 </view>
 <view class='readyarticle'>
-  <text class='article'>奶油奶酪</text>
-  <text class='article' style='text-align:center;'>125克</text>
-</view>
-<view class='readyarticle'>
-  <text class='article'>奶油奶酪</text>
-  <text class='article' style='text-align:center;'>125克</text>
-</view>
-<view class='readyarticle'>
-  <text class='article'>奶油奶酪</text>
-  <text class='article' style='text-align:center;'>125克</text>
-</view>
-<view class='readyarticle'>
-  <text class='article'>奶油奶酪</text>
-  <text class='article' style='text-align:center;'>125克</text>
+{{array.menu_material}}电饭锅单方事故的双方各单方事故的双方各第三方广东佛山广东佛山
 </view>
 <!-- 准备食材 -->
 
 <!-- 步骤 -->
+<block wx:for='{{array.menu_step}}' wx:key="{{index}}">
 <view class='step'>
-  <view class='step-title'>步骤一</view>
-  <image class='step-pic' mode="widthFix" src='../../image/02.jpg'></image>
+  <view class='step-title'>步骤{{index+1}}</view>
+  <image class='step-pic' mode="widthFix" src='{{item.pic}}'></image>
   <view class='step-Description'>
-制作这款蛋糕可以使用固底模，也可以使用活底模。如果是活底模，可以将活底取出，用锡纸包上，便于将蛋糕整个脱模。如果是固底模，可以在底部垫一张大小合适的油纸或锡纸
+    {{item.content}}
   </view>
 </view>
-<view class='step'>
-  <view class='step-title'>步骤一</view>
-  <image class='step-pic' mode="widthFix" src='../../image/02.jpg'></image>
-  <view class='step-Description'>
-制作这款蛋糕可以使用固底模，也可以使用活底模。如果是活底模，可以将活底取出，用锡纸包上，便于将蛋糕整个脱模。如果是固底模，可以在底部垫一张大小合适的油纸或锡纸
-  </view>
-</view>
-<view class='step'>
-  <view class='step-title'>步骤一</view>
-  <image class='step-pic' mode="widthFix" src='../../image/02.jpg'></image>
-  <view class='step-Description'>
-制作这款蛋糕可以使用固底模，也可以使用活底模。如果是活底模，可以将活底取出，用锡纸包上，便于将蛋糕整个脱模。如果是固底模，可以在底部垫一张大小合适的油纸或锡纸
-  </view>
-</view>
+</block>
 <!-- 步骤 -->
 
+<image style='width:750rpx;height:6rpx;' src='../../image/icon/line.png'></image>
+
 <!-- 网友分享 -->
-<swiper class='cookShare'>
-  <swiper-item class='cookShare-item'>
-    <image class='cookShare-img' src='../../image/02.jpg'></image>
-    <view class='flex-row'>
-      <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-      <view class='cookShare-user-name'>廖雁生</view>
+<view class='cookShare_title'>网友分享的作品</view>
+
+<swiper class='cookShare' circular="true" next-margin="100rpx">
+  <swiper-item class='cookShare-swiper'>
+   <view class='cookShare-item'>
+      <image class='cookShare-img' src='../../image/02.jpg'></image>
+      <view class='flex-row'>
+        <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+        <view class='cookShare-user-name'>廖雁生</view>
+      </view>
+      <view class='cookShare-word'>第一次做，dfgdfsg范德萨发给蛋糕蛋糕味道还不错哦!</view>
     </view>
   </swiper-item>
-  <swiper-item class='cookShare-item'>
-    <image class='cookShare-img' src='../../image/02.jpg'></image>
-    <view class='flex-row'>
-      <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-      <view class='cookShare-user-name'>廖雁生</view>
-    </view>
-  </swiper-item>  
-  <swiper-item class='cookShare-item'>
-    <image class='cookShare-img' src='../../image/02.jpg'></image>
-    <view class='flex-row'>
-      <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-      <view class='cookShare-user-name'>廖雁生</view>
+  <swiper-item class='cookShare-swiper'>
+   <view class='cookShare-item'>
+      <image class='cookShare-img' src='../../image/02.jpg'></image>
+      <view class='flex-row'>
+        <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+        <view class='cookShare-user-name'>廖雁生</view>
+      </view>
+      <view class='cookShare-word'>第一次做，dfgdfsg范德萨发给蛋糕蛋糕味道还不错哦!</view>
     </view>
   </swiper-item>
-  <swiper-item class='cookShare-item'>
-    <image class='cookShare-img' src='../../image/02.jpg'></image>
-    <view class='flex-row'>
-      <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-      <view class='cookShare-user-name'>廖雁生</view>
+    <swiper-item class='cookShare-swiper'>
+   <view class='cookShare-item'>
+      <image class='cookShare-img' src='../../image/02.jpg'></image>
+      <view class='flex-row'>
+        <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+        <view class='cookShare-user-name'>廖雁生</view>
+      </view>
+      <view class='cookShare-word'>第一次做，dfgdfsg范德萨发给蛋糕蛋糕味道还不错哦!</view>
     </view>
-  </swiper-item>    
+  </swiper-item>
+
+  
 </swiper>
-
 <!-- 网友分享 -->
 
+<!-- 网友评论 -->
+<view class='cookShare_title row-between'>
+  <text>网友评论</text>
+  <view bindtap='writecomment'>
+  <image style='width:34rpx;height:30rpx;' src='../../image/icon/pen.png'></image>
+  <text style='color:#d81e06;margin-right:20rpx;text-decoration:underline;'>写评论</text>
+  </view>
+</view>
+
+<view class='comment'>
+  <view class='flex-row'>
+    <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+    <view class='cookShare-user-name'>廖雁生</view>
+  </view>
+  <view class='comment_content'>
+    哈啊哈哈哈哈啊哈哈哈哈ahahaha哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈啊哈哈啊哈哈
+  </view>
+  <view class='comment_content'>
+    2019-04-01
+  </view>
+</view>
+<view class='comment'>
+  <view class='flex-row'>
+    <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+    <view class='cookShare-user-name'>廖雁生</view>
+  </view>
+  <view class='comment_content'>
+    哈啊哈哈哈哈啊哈哈哈哈ahahaha哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈啊哈哈啊哈哈
+  </view>
+  <view class='comment_content'>
+    2019-04-01
+  </view>
+</view>
+<view class='comment'>
+  <view class='flex-row'>
+    <image class='cookShare-user-head' src='../../image/02.jpg'></image>
+    <view class='cookShare-user-name'>廖雁生</view>
+  </view>
+  <view class='comment_content'>
+    哈啊哈哈哈哈啊哈哈哈哈ahahaha哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈啊哈哈啊哈哈
+  </view>
+  <view class='comment_content'>
+    2019-04-01
+  </view>
+</view>
+<!-- 网友评论 -->
+
+<!-- 填写评论弹窗 -->
+<view class="commodity_screen" bindtap="hideView" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <view class='comment_title'>添加评论</view>
+  <textarea class='comment_text' placeholder="留下你的足迹" adjust-position="false" />
+  <view class='flex-row'>
+    <button class='comment_cancel' bindtap='hideView'>取消</button>
+    <button class='comment_keep'>发表</button>
+  </view>
+</view>
+<!-- 切换评论弹窗 -->
 
 
 
@@ -108,14 +156,17 @@
 <view class='flex-row bottom'>
   <view class='bottom-btn'>
     <image class='icon' src='/image/icon/col.png'></image>
-    收藏
+    <text>收藏</text>
   </view>
   <view class='bottom-btn'>
     <image class='icon' src='/image/icon/photo.png'></image>
-    拍照分享
+    <text>拍照分享</text>
   </view>
+  <button open-type="share" class='contact'>
   <view class='bottom-btn'>
     <image class='icon' src='/image/icon/post.png'></image>
-    转发
+    <text style='line-height:30rpx;'>转发</text>
   </view>
+  </button>
 </view>
+<!-- 底部功能键 -->

@@ -76,7 +76,7 @@ image.quiet {
 }
 .content-img1{
   width:100%;
-  height: 400rpx;
+  height: 300rpx;
   border-radius: 10rpx;
   background-repeat:no-repeat; 
   background-size: cover; 

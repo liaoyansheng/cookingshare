@@ -7,7 +7,9 @@
     "pages/Cookinglist/Cookinglist",
     "pages/personal/personal",
     "pages/CookMethod/CookMethod",
-    "pages/CookDetail/CookDetail"
+    "pages/CookDetail/CookDetail",
+    "pages/CookRecord/CookRecord",
+    "pages/BrowseHistory/BrowseHistory"
   ],
   "window":{
     "navigationBarBackgroundColor":"#F3090D",

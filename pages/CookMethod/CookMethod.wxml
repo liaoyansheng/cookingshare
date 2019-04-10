@@ -1,3 +1,39 @@
 <!--pages/CookMethod/CookMethod.wxml-->
-<view bindtap='choose'>选择图片</view>
-<image src='{{tempFilePaths}}'></image>
+<form bindsubmit='keep' enctype="multipart/form-data">
+  <view class='content'>
+    <input name='menu_title' class='food-title' placeholder='写下你的菜谱名'/>
+    <view style='margin:20rpx 0;font-size:32rpx;font-weight:700;'>美食简介</view>
+    <textarea name='menu_introduction' class='food-introduce' placeholder='关于这道菜谱的介绍'/>
+    <view style='margin:20rpx 0;font-size:32rpx;font-weight:700;'>准备食材</view>
+    <textarea name='menu_material' class='food-introduce' placeholder='食材如：鸡蛋 1颗'/>
+    <!-- 隐藏 -->
+    <input name="name" style='display:none;height:100rpx;' value='{{name}}'></input>
+    <input name="head_img" style='display:none;height:100rpx;' value='{{head_img}}'></input>
+    <!-- 隐藏 -->
+  </view>
+<button class='release' form-type="submit">发布上传</button>
+</form>
+
+<view class='content'>
+
+  <view style='margin:20rpx 0;font-size:32rpx;font-weight:700;'>详细图文步骤（请先添加图片）</view>
+
+  <view wx:for="{{menu_step}}" wx:key="{{index}}" style='background-color:white;'>
+    <view style='margin:20rpx 0;font-size:36rpx;font-weight:700;'>步骤{{index+1}}</view>
+    <view class='choose-pic'>
+      <image style='width:500rpx;height:420rpx;;' src='{{item.pic}}' mode='aspectFill' />
+      <icon type='cancel' bindtap='deletedImg' data-index='{{index}}' size='25' color='#ef8383' class='deleteimg'></icon>
+    </view>
+    <textarea name='' class='step-one' bindinput='inputCon' bindblur='outBlur' maxlength='-1'
+    auto-height='true' value='{{item.content}}' id='{{index+1}}' placeholder='写点什么...'/>
+  </view>
+
+</view>
+
+<!-- 添加图片按钮 -->
+<view class='addImg' bindtap='addImg'>
+  <image src='/image/icon/addpic.png' style='width:60rpx;height:60rpx;margin:20rpx;' />
+</view>
+<!-- 添加图片按钮 -->
+
+<view style='height:100rpx;width:710rpx;'></view>

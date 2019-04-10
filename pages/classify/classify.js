@@ -15,7 +15,7 @@ Page({
   //分类搜索列表
   toCookinglist:function(){
     wx.navigateTo({
-      url: '../Cookinglist/Cookinglist',
+      url: '../Cookinglist/Cookinglist?name='+'虾',
     })
   },
   // 触摸开始事件
