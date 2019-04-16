@@ -13,9 +13,9 @@
   <view wx:if="{{search_more != 1}}" class='search_more_check' bindtap='SearchMore' data-id='1'>综合</view>
   <view wx:if="{{search_more == 1}}" class='search_more_check' bindtap='SearchMore' data-id='1' style='color:#000;font-weight:700;border-bottom:2rpx solid #F3090D;'>综合</view>
   <view wx:if="{{search_more != 2}}" class='search_more_check' bindtap='SearchMore' data-id='2'>评论最多</view>
-  <view wx:if="{{search_more == 2}}" class='search_more_check' bindtap='SearchMore' data-id='2' style='color:#000;font-weight:700;border-bottom:2rpx solid #F3090D;'>浏览最多</view>
-  <view wx:if="{{search_more != 3}}" class='search_more_check' bindtap='SearchMore' data-id='3' >点赞最多</view>
-  <view wx:if="{{search_more == 3}}" class='search_more_check' bindtap='SearchMore' data-id='3' style='color:#000;font-weight:700;border-bottom:2rpx solid #F3090D;'>点赞最多</view>
+  <view wx:if="{{search_more == 2}}" class='search_more_check' bindtap='SearchMore' data-id='2' style='color:#000;font-weight:700;border-bottom:2rpx solid #F3090D;'>评论最多</view>
+  <view wx:if="{{search_more != 3}}" class='search_more_check' bindtap='SearchMore' data-id='3' >分享最多</view>
+  <view wx:if="{{search_more == 3}}" class='search_more_check' bindtap='SearchMore' data-id='3' style='color:#000;font-weight:700;border-bottom:2rpx solid #F3090D;'>分享最多</view>
 </view>
 <view class='search_more1'></view>
 <!-- 排序条件 -->
@@ -26,12 +26,19 @@
     <view class='cook_name'>{{item.menu_title}}</view>
     <view class='cook_method'>{{item.menu_material}}</view>
     <view class='cook_people'>{{item.name}}</view>
-    <view class='cook_msg'>999人看过　999收藏</view>
+    <view class='cook_msg'>
+      <view>7人评论</view>
+      <view>23人分享</view>
+      <view>34人浏览</view>
+    </view>
   </view>
 </view>
 </block>
 <block wx:if='{{foodlist.length==0}}'>
-  <view>暂无搜索结果</view>
+  <view class='flex-center'>
+    <image class='nodata' src='/image/icon/noresult.png' lazy-load></image>
+    <view class='nodatamsg'>暂无数据</view>
+  </view>
 </block>
 
 

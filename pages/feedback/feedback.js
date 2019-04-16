@@ -1,47 +1,28 @@
-// pages/CookRecord/CookRecord.js
-const app = getApp()
+// pages/feedback/feedback.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
-  //美食菜谱详情
-  toCookDetail: function (e) {
-    let id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: '../CookDetail/CookDetail?id=' + id,
+  submit:function(){
+    wx.showToast({
+      icon: 'success',
+      title: '提交成功',
     })
+    setTimeout(function () {
+      wx.navigateBack({
+        delta: 1
+      })
+    }, 2000)
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      mask: true,
-      title: '加载中...',
-    });
-    let that = this;
-    wx.request({
-      url: 'https://www.liaoyansheng.top/api/user/showmyshare',
-      method: 'POST',
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      data: {
-        name: app.globalData.user.name,
-      },
-      dataType: 'json',
-      success(res) {
-        //console.log(res)
-        that.setData({
-          sharelist:res.data
-        })
-        wx.hideLoading()
-      }
-    });
+
   },
 
   /**

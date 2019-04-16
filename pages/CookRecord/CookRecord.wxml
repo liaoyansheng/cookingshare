@@ -1,15 +1,20 @@
 <!--pages/CookRecord/CookRecord.wxml-->
-<view class='content'>
+<view class='myshare'>
 
-  <textarea name='' placeholder="记录美食得点点滴滴..." auto-focus auto-height class='text-area'>
-  </textarea>
-
-  <block wx:for="{{img_arr}}" wx:key="{{img_arr}}">
-    <image class='pic_upload' src='{{item}}'></image>
+  <block wx:for='{{sharelist}}' wx:key='{{index}}'>
+    <view class='content' data-id='{{item.menu_id}}' bindtap='toCookDetail'>
+      <image class='content-img' src='{{item.share_img}}'></image>
+      <view class='content-work'>{{item.share_content}}</view>
+      <view class='content-time'>{{item.createtime}}</view>
+    </view>
   </block>
 
-  <image class='pic_upload' src='/image/icon/pic.png' bindtap="chooseimg"></image>
+  <block wx:if='{{sharelist.length == 0}}'>
+    <view class='content'>
+      <image class='content-img' src='/image/icon/addpic.png'></image>
+      <view class='content-work'>快去分享你的美食吧！</view>
+      <view class='content-time'>2019-04-18</view>
+    </view>
+  </block>
 
 </view>
-
-<button class='release' loading form-type='submit'>发布</button>

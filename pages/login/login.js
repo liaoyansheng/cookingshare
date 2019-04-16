@@ -1,4 +1,4 @@
-// pages/CookRecord/CookRecord.js
+// pages/login/login.js
 const app = getApp()
 Page({
 
@@ -6,42 +6,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+
   },
-  //美食菜谱详情
-  toCookDetail: function (e) {
-    let id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: '../CookDetail/CookDetail?id=' + id,
-    })
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  getUserInfo: function (e) {
+    //console.log(e);
     wx.showLoading({
       mask: true,
       title: '加载中...',
     });
-    let that = this;
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
+    //增加用户
     wx.request({
-      url: 'https://www.liaoyansheng.top/api/user/showmyshare',
+      url: 'https://www.liaoyansheng.top/api/user/addUser',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
       data: {
-        name: app.globalData.user.name,
+        name: e.detail.userInfo.nickName,
+        head_img: e.detail.userInfo.avatarUrl
       },
       dataType: 'json',
       success(res) {
-        //console.log(res)
-        that.setData({
-          sharelist:res.data
-        })
         wx.hideLoading()
+        //console.log(res);
+        console.log(res.data[0].id);
+        app.globalData.user = res.data[0];
+        wx.switchTab({
+          url: '../foodhome/foodhome',
+        })
       }
-    });
+    })
+
+
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
   },
 
   /**

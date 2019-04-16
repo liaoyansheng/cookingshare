@@ -1,0 +1,10 @@
+<!--pages/feedback/feedback.wxml-->
+<view class='myfeed'>
+  <view class='user-feed'>用户反馈页</view>
+  <textarea class='feed' placeholder='将出现的问题反馈给我们，我们将做得更好'>
+  </textarea>
+  <view class='content'>
+    <view class='sub' bindtap='submit'>提交</view>
+  </view>
+  
+</view>

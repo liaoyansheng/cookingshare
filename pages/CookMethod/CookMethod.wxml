@@ -11,7 +11,9 @@
     <input name="head_img" style='display:none;height:100rpx;' value='{{head_img}}'></input>
     <!-- 隐藏 -->
   </view>
-<button class='release' form-type="submit">发布上传</button>
+  <cover-view class='release'>
+  <button class='release' form-type="submit">发布上传</button>
+  </cover-view>
 </form>
 
 <view class='content'>
@@ -28,12 +30,16 @@
     auto-height='true' value='{{item.content}}' id='{{index+1}}' placeholder='写点什么...'/>
   </view>
 
+  <view bindtap='addImg'>
+    <image src='/image/icon/addimg.png' style='width:500rpx;height:500rpx;margin: 0 105rpx;' />
+  </view>
+
 </view>
 
 <!-- 添加图片按钮 -->
-<view class='addImg' bindtap='addImg'>
+<!-- <view class='addImg' bindtap='addImg'>
   <image src='/image/icon/addpic.png' style='width:60rpx;height:60rpx;margin:20rpx;' />
-</view>
+</view> -->
 <!-- 添加图片按钮 -->
 
 <view style='height:100rpx;width:710rpx;'></view>

@@ -25,7 +25,7 @@
   height: 200rpx;
   width:710rpx;
   margin:30rpx 0;
-  border-bottom:2rpx solid #F2F2F2;
+  border:2rpx solid #F2F2F2;
 }
 .food-material{
   height:60rpx;

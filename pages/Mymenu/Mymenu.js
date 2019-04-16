@@ -1,4 +1,4 @@
-// pages/CookRecord/CookRecord.js
+// pages/Mymenu/Mymenu.js
 const app = getApp()
 Page({
 
@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+
   },
   //美食菜谱详情
   toCookDetail: function (e) {
@@ -25,7 +25,7 @@ Page({
     });
     let that = this;
     wx.request({
-      url: 'https://www.liaoyansheng.top/api/user/showmyshare',
+      url: 'https://www.liaoyansheng.top/api/user/showmymenu',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -36,8 +36,9 @@ Page({
       dataType: 'json',
       success(res) {
         //console.log(res)
+        let foodlist = res.data.filter(item => item.menu_step = JSON.parse(item.menu_step));
         that.setData({
-          sharelist:res.data
+          menulist: foodlist
         })
         wx.hideLoading()
       }

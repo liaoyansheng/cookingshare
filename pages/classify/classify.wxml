@@ -6,110 +6,41 @@
     <text>热门分类</text>
   </view>
   <view class='allgenre'>
-    <view class='genre' bindtap='toCookinglist'>
-      <image src="/image/classify/01.jpg">
+    <block wx:for='{{hotclassify}}' wx:key='{{index}}'>
+    <view class='genre' data-word='{{item.class_name}}' bindtap='toCookinglist'>
+      <image src="{{item.class_img}}">
       </image>
-      <view class='className'>家常菜</view>
+      <view class='className'>{{item.class_name}}</view>
     </view>
-    <view class='genre'>
-      <image src="/image/classify/02.jpg">
-      </image>
-      <view class='className'>肉类</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/03.jpg">
-      </image>
-      <view class='className'>蔬菜</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/04.jpg">
-      </image>
-      <view class='className'>汤类</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/05.jpg">
-      </image>
-      <view class='className'>粥类</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/06.jpg">
-      </image>
-      <view class='className'>水产</view>
-    </view>        
+    </block>     
   </view>
+
   <view class='title'>
-  <image class='icon' src='/image/icon/place.png'></image>
-  <text>地方特色</text>
+    <image class='icon' src='/image/icon/place.png'></image>
+    <text>地方特色</text>
   </view>
   <view class='allgenre'>
-    <view class='genre'>
-      <image src="/image/classify/07.jpg">
+    <block wx:for='{{placeclassify}}' wx:key='{{index}}'>
+    <view class='genre' data-word='{{item.class_name}}' bindtap='toCookinglist'>
+      <image src="{{item.class_img}}">
       </image>
-      <view class='className'>粤菜</view>
+      <view class='className'>{{item.class_name}}</view>
     </view>
-    <view class='genre'>
-      <image src="/image/classify/09.jpg">
-      </image>
-      <view class='className'>湘菜</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/10.jpg">
-      </image>
-      <view class='className'>川菜</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/11.jpg">
-      </image>
-      <view class='className'>鲁菜</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/12.jpg">
-      </image>
-      <view class='className'>苏菜</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/13.jpg">
-      </image>
-      <view class='className'>浙菜</view>
-    </view> 
-    <view class='genre'>
-      <image src="/image/classify/14.jpg">
-     </image>
-     <view class='className'>徽菜</view>
-    </view>             
+    </block>    
   </view> 
+
   <view class='title'>
   <image class='icon' src='/image/icon/mind.png'></image>
   <text>创意分类</text>
   </view>
   <view class='allgenre'>
-    <view class='genre'>
-      <image src="/image/classify/15.jpg"> 
+    <block wx:for='{{creativeclassify}}' wx:key='{{index}}'>
+    <view class='genre' data-word='{{item.class_name}}' bindtap='toCookinglist'>
+      <image src="{{item.class_img}}">
       </image>
-      <view class='className'>自制</view>
+      <view class='className'>{{item.class_name}}</view>
     </view>
-    <view class='genre'>
-      <image src="/image/classify/16.jpg">
-      </image>
-      <view class='className'>野餐</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/17.jpg">
-      </image>
-      <view class='className'>黑暗料理</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/18.jpg">
-      </image>
-      <view class='className'>重口味</view>
-    </view>
-    <view class='genre'>
-      <image src="/image/classify/01.jpg">
-      </image>
-      <view class='className'>小清新</view>
-    </view>
-       
+    </block>   
   </view>  
-
 
 </view>

@@ -39,8 +39,8 @@
   font-size: 26rpx;
 }
 .sex-icon{
-  width:44rpx;
-  height:44rpx;
+  width:32rpx;
+  height:32rpx;
 }
 .icon{
   width:38rpx;

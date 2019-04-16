@@ -1,0 +1,27 @@
+/* pages/login/login.wxss */
+.background{
+  width: 100vw;
+  height: 100vh;
+  /* background:url('https://www.liaoyansheng.top/public/uploads/test.jpg'); */
+}
+.background1{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+.myicon{
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 400rpx;
+}
+.login-btn{
+  font-weight: 700;
+  color: #d81e06;
+  border-radius: 60rpx;
+  border: 2rpx solid #d81e06;
+  padding-left:60rpx;
+  padding-right:60rpx;
+}

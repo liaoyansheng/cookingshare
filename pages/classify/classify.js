@@ -3,7 +3,7 @@ var time = 0;
 var touchDot = 0;//触摸时的原点
 var interval = "";
 var flag_hd = true;
-
+const app = getApp()
 Page({
 
   /**
@@ -13,9 +13,10 @@ Page({
 
   },
   //分类搜索列表
-  toCookinglist:function(){
+  toCookinglist:function(e){
+    let word = e.currentTarget.dataset.word;
     wx.navigateTo({
-      url: '../Cookinglist/Cookinglist?name='+'虾',
+      url: '../Cookinglist/Cookinglist?name=' + word,
     })
   },
   // 触摸开始事件
@@ -63,6 +64,58 @@ Page({
         timingFunc: 'easeIn'
       }
     })
+
+    wx.request({
+      url: 'https://www.liaoyansheng.top/api/foodlist/showclassify',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        class_category: '热门分类'
+      },
+      dataType: 'json',
+      success(res) {
+        //console.log(res.data)
+        that.setData({
+          hotclassify: res.data
+        })
+      }
+    });
+    wx.request({
+      url: 'https://www.liaoyansheng.top/api/foodlist/showclassify',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        class_category: '地方特色'
+      },
+      dataType: 'json',
+      success(res) {
+        //console.log(res.data)
+        that.setData({
+          placeclassify: res.data
+        })
+      }
+    });
+    wx.request({
+      url: 'https://www.liaoyansheng.top/api/foodlist/showclassify',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        class_category: '创意分类'
+      },
+      dataType: 'json',
+      success(res) {
+        //console.log(res.data)
+        that.setData({
+          creativeclassify: res.data
+        })
+      }
+    });         
   },
 
   /**
@@ -79,6 +132,11 @@ Page({
     flag_hd = true;    //重新进入页面之后，可以再次执行滑动切换页面代码
     clearInterval(interval); // 清除setInterval
     time = 0;
+
+    // console.log(app.globalData.userInfo);
+    // if (app.globalData.user){
+    //   console.log(app.globalData.user);
+    // }
   },
 
   /**

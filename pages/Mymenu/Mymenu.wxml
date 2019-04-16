@@ -1,0 +1,27 @@
+<!--pages/Mymenu/Mymenu.wxml-->
+<block wx:for='{{menulist}}' wx:key="{{index}}">
+<view class='flex-row' data-id='{{item.id}}' bindtap='toCookDetail'>
+  <view class='flex-column'>
+    <view class='cook_name'>{{item.menu_title}}</view>
+    <view class='cook_method'>{{item.menu_introduction}}</view>
+    <!-- <view class='cook_people'>{{item.name}}</view> -->
+    <view class='cook_msg'>
+      {{item.createtime}}上传
+    </view>
+  </view>
+  <image class='cook_img' src='{{item.menu_step[item.menu_step.length-1].pic}}'></image>
+</view>
+</block>
+<block wx:if='{{menulist.length == 0}}'>
+<view class='flex-row'>
+  <view class='flex-column'>
+    <view class='cook_name'>快去分享你的美食吧哈哈哈</view>
+    <view class='cook_method'>（你已上传的会在这里显示）</view>
+    <!-- <view class='cook_people'>{{item.name}}</view> -->
+    <view class='cook_msg'>
+      上传时间
+    </view>
+  </view>
+  <image class='cook_img' src='/image/icon/addpic.png'></image>
+</view>
+</block>

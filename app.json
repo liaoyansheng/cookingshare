@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/login/login",
     "pages/foodhome/foodhome",
     "pages/index/index",
     "pages/logs/logs",
@@ -9,7 +10,9 @@
     "pages/CookMethod/CookMethod",
     "pages/CookDetail/CookDetail",
     "pages/CookRecord/CookRecord",
-    "pages/BrowseHistory/BrowseHistory"
+    "pages/BrowseHistory/BrowseHistory",
+    "pages/feedback/feedback",
+    "pages/Mymenu/Mymenu"
   ],
   "window":{
     "navigationBarBackgroundColor":"#F3090D",

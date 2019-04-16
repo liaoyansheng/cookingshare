@@ -9,6 +9,8 @@ var flag_hd = true;
 
 Page({
   data: {
+    attention:[],
+    collection:[],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -28,6 +30,11 @@ Page({
       url: '../CookRecord/CookRecord',
     })
   },
+  toMymenu:function(){
+    wx.navigateTo({
+      url: '../Mymenu/Mymenu',
+    })
+  },
   //上传攻略
   toCookMethod:function(){
     wx.navigateTo({
@@ -37,6 +44,11 @@ Page({
   toBrowseHistory:function(){
     wx.navigateTo({
       url: '../BrowseHistory/BrowseHistory',
+    })
+  },
+  tofeedback:function(){
+    wx.navigateTo({
+      url: '../feedback/feedback',
     })
   },
   //事件处理函数
@@ -153,6 +165,8 @@ Page({
     flag_hd = true;    //重新进入页面之后，可以再次执行滑动切换页面代码
     clearInterval(interval); // 清除setInterval
     time = 0;
+    this.finduser();
+    this.UserCommentCount();
   },
   /**
  * 生命周期函数--监听页面初次渲染完成
@@ -176,5 +190,52 @@ Page({
  */
   onShareAppMessage: function () {
 
+  },
+
+  //获取用户信息
+  finduser:function(){
+    let that = this;
+    wx.request({
+      url: 'https://www.liaoyansheng.top/api/user/user',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        name: app.globalData.user.name
+      },
+      dataType: 'json',
+      success(res) {
+        //console.log(JSON.parse(res.data[0].attention_list));
+        let collection = JSON.parse(res.data[0].collection_list)
+        let attention = JSON.parse(res.data[0].attention_list)
+        that.setData({
+          attention: attention,
+          collection: collection
+        })
+      }
+    })
+  },
+
+  //获取评论数据
+  UserCommentCount:function(){
+    let that = this;
+    wx.request({
+      url: 'https://www.liaoyansheng.top/api/user/UserCommentCount',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        name: app.globalData.user.name
+      },
+      dataType: 'json',
+      success(res) {
+        //console.log(res);
+        that.setData({
+          comment:res.data
+        })
+      }
+    })
   }
 })

@@ -1,30 +1,30 @@
 <!--pages/CookDetail/CookDetail.wxml-->
-<image class='cook_img' mode="widthFix" src='{{array.menu_step[0].pic}}'></image>
+<image class='cook_img' mode="widthFix" src='{{food.menu_step[food.menu_step.length-1].pic}}'></image>
 
 <view class='cook_title'>
-  <view class='cook_name'>{{array.menu_title}}</view>
+  <view class='cook_name'>{{food.menu_title}}</view>
   <view class='cook_score'>8.5综合评分·8个好友分享过</view>
 </view>
 
 <view class='cook_author'>
   <view class='flex-row'>
-    <image class='cook_author_head' src='{{array.head_img}}'></image>
+    <image class='cook_author_head' src='{{food.head_img}}'></image>
     <view class='flex-column' style='margin-left:20rpx;'>
       <view class='author'>作者</view>
-      <view class='author_name'>{{array.name}}</view>
+      <view class='author_name'>{{food.name}}</view>
     </view>
   </view>
-  <view class='attent'>
+  <view wx:if='{{attented == false}}' class='attent' bindtap='attention'>
     关注
   </view>
-  <!-- <view class='attented'>
+  <view wx:if='{{attented == true}}' class='attented' bindtap='noattention'>
     已关注
-  </view> -->
+  </view>
 </view>
 
 <!-- 美食介绍 -->
 <view class='cook_introduction'>
-{{array.menu_introduction}}
+{{food.menu_introduction}}
 </view>
 <!-- 美食介绍 -->
 
@@ -33,15 +33,15 @@
   准备食材
 </view>
 <view class='readyarticle'>
-{{array.menu_material}}电饭锅单方事故的双方各单方事故的双方各第三方广东佛山广东佛山
+{{food.menu_material}}
 </view>
 <!-- 准备食材 -->
 
 <!-- 步骤 -->
-<block wx:for='{{array.menu_step}}' wx:key="{{index}}">
+<block wx:for='{{food.menu_step}}' wx:key="{{index}}">
 <view class='step'>
   <view class='step-title'>步骤{{index+1}}</view>
-  <image class='step-pic' mode="widthFix" src='{{item.pic}}'></image>
+  <image class='step-pic' mode="widthFix" src='{{item.pic}}' data-url='{{item.pic}}' bindtap='preview'></image>
   <view class='step-Description'>
     {{item.content}}
   </view>
@@ -53,112 +53,95 @@
 
 <!-- 网友分享 -->
 <view class='cookShare_title'>网友分享的作品</view>
-
-<swiper class='cookShare' circular="true" next-margin="100rpx">
-  <swiper-item class='cookShare-swiper'>
-   <view class='cookShare-item'>
-      <image class='cookShare-img' src='../../image/02.jpg'></image>
-      <view class='flex-row'>
-        <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-        <view class='cookShare-user-name'>廖雁生</view>
-      </view>
-      <view class='cookShare-word'>第一次做，dfgdfsg范德萨发给蛋糕蛋糕味道还不错哦!</view>
-    </view>
-  </swiper-item>
-  <swiper-item class='cookShare-swiper'>
-   <view class='cookShare-item'>
-      <image class='cookShare-img' src='../../image/02.jpg'></image>
-      <view class='flex-row'>
-        <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-        <view class='cookShare-user-name'>廖雁生</view>
-      </view>
-      <view class='cookShare-word'>第一次做，dfgdfsg范德萨发给蛋糕蛋糕味道还不错哦!</view>
-    </view>
-  </swiper-item>
+<block wx:if="{{foodshare.length!=0}}">
+  <swiper class='cookShare' next-margin="100rpx">
+    <block wx:for='{{foodshare}}' wx:key='{{index}}'>
     <swiper-item class='cookShare-swiper'>
-   <view class='cookShare-item'>
-      <image class='cookShare-img' src='../../image/02.jpg'></image>
-      <view class='flex-row'>
-        <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-        <view class='cookShare-user-name'>廖雁生</view>
+    <view class='cookShare-item'>
+        <image class='cookShare-img' src='{{item.share_img}}' data-url='{{item.share_img}}' bindtap='preview'></image>
+        <view class='flex-row'>
+          <image class='cookShare-user-head' src='{{item.head_img}}'></image>
+          <view class='cookShare-user-name'>{{item.name}}</view>
+        </view>
+        <view class='cookShare-word'>{{item.share_content}}</view>
       </view>
-      <view class='cookShare-word'>第一次做，dfgdfsg范德萨发给蛋糕蛋糕味道还不错哦!</view>
-    </view>
-  </swiper-item>
-
-  
-</swiper>
+    </swiper-item>
+    </block>
+  </swiper>
+</block>
+<block wx:if="{{foodshare.length==0}}">
+  <view class='cookShare1'>暂无网友分享,快来分享你的美食作品吧</view>
+</block>
 <!-- 网友分享 -->
 
 <!-- 网友评论 -->
 <view class='cookShare_title row-between'>
-  <text>网友评论</text>
+  <text>关于这道美食的评论</text>
   <view bindtap='writecomment'>
-  <image style='width:34rpx;height:30rpx;' src='../../image/icon/pen.png'></image>
-  <text style='color:#d81e06;margin-right:20rpx;text-decoration:underline;'>写评论</text>
+    <image style='width:34rpx;height:30rpx;' src='../../image/icon/pen.png'></image>
+    <text style='color:#d81e06;margin-right:20rpx;text-decoration:underline;'>写评论</text>
   </view>
 </view>
-
+<block wx:for="{{foodcomment}}" wx:key="{{index}}">
 <view class='comment'>
   <view class='flex-row'>
-    <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-    <view class='cookShare-user-name'>廖雁生</view>
+    <image class='cookShare-user-head' src='{{item.head_img}}'></image>
+    <view class='cookShare-user-name'>{{item.name}}</view>
   </view>
   <view class='comment_content'>
-    哈啊哈哈哈哈啊哈哈哈哈ahahaha哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈啊哈哈啊哈哈
+    {{item.content}}
   </view>
-  <view class='comment_content'>
-    2019-04-01
+  <view class='comment_content' style='font-size:20rpx;color:#808080;'>
+    {{item.createtime}}
   </view>
 </view>
-<view class='comment'>
-  <view class='flex-row'>
-    <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-    <view class='cookShare-user-name'>廖雁生</view>
-  </view>
-  <view class='comment_content'>
-    哈啊哈哈哈哈啊哈哈哈哈ahahaha哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈啊哈哈啊哈哈
-  </view>
-  <view class='comment_content'>
-    2019-04-01
-  </view>
-</view>
-<view class='comment'>
-  <view class='flex-row'>
-    <image class='cookShare-user-head' src='../../image/02.jpg'></image>
-    <view class='cookShare-user-name'>廖雁生</view>
-  </view>
-  <view class='comment_content'>
-    哈啊哈哈哈哈啊哈哈哈哈ahahaha哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈啊哈哈啊哈哈
-  </view>
-  <view class='comment_content'>
-    2019-04-01
-  </view>
-</view>
+</block>
+<block wx:if="{{foodcomment.length==0}}">
+  <view class='cookShare1'>暂无网友评论,说说你的评价吧</view>
+</block>
 <!-- 网友评论 -->
 
 <!-- 填写评论弹窗 -->
 <view class="commodity_screen" bindtap="hideView" wx:if="{{showModalStatus}}"></view>
 <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
   <view class='comment_title'>添加评论</view>
-  <textarea class='comment_text' placeholder="留下你的足迹" adjust-position="false" />
+  <textarea class='comment_text' placeholder="留下你的足迹" adjust-position="false" bindinput='savecomment'/>
   <view class='flex-row'>
     <button class='comment_cancel' bindtap='hideView'>取消</button>
-    <button class='comment_keep'>发表</button>
+    <button class='comment_keep' bindtap='keepcomment'>发表</button>
   </view>
 </view>
 <!-- 切换评论弹窗 -->
 
-
+<!-- 拍照分享弹窗 -->
+<view class="commodity_screen1" bindtap="hideView1" wx:if="{{showModalStatus1}}"></view>
+<view class="commodity_attr_box1" wx:if="{{showModalStatus1}}">
+  <view class='comment_title'>我的分享</view>
+  <image class='shareimg' src='{{tempFilePaths}}'></image>
+  <input class='share-text' auto-focus='true' value='（#￣▽￣#）这是我的第一次美食分享' bindblur='getshareword'/>
+  <view class='flex-row'>
+    <view class='sharecancel' bindtap='hideView1'>取消</view>
+    <view class='sharekeep' bindtap='keepshare'>分享</view>
+  </view>
+</view>
+<!-- 拍照分享弹窗 -->
 
 <!-- 底部功能键 -->
 <view class='bottom1'></view>
 <view class='flex-row bottom'>
-  <view class='bottom-btn'>
+  <block wx:if='{{col == false}}'>
+  <view class='bottom-btn' bindtap='collection'>
     <image class='icon' src='/image/icon/col.png'></image>
     <text>收藏</text>
   </view>
-  <view class='bottom-btn'>
+  </block>
+  <block wx:if='{{col == true}}'>
+  <view class='bottom-btn' bindtap='nocollection'>
+    <image class='icon' src='/image/icon/colcheck.png'></image>
+    <text>已收藏</text>
+  </view>
+  </block>
+  <view class='bottom-btn' bindtap='takeshare'>
     <image class='icon' src='/image/icon/photo.png'></image>
     <text>拍照分享</text>
   </view>

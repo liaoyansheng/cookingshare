@@ -21,29 +21,38 @@
 <view class="foodpage" bindtouchstart="touchStart" bindtouchend="touchEnd">
 
 <!-- 推荐 -->
-<view class='todaygood'>今日推荐</view>
-<view class='message'>
-  <view class='flex-column'>
-    <text class='message-title'>冬季饮食养生的五个原则 冬季养生食谱的四个原则所属分类： 冬季养生</text>
-    <text class='message-visit'>999人看过</text>
+<view class='todaygood'>热门推荐</view>
+<!-- <block wx:for="{{foodlist}}" wx:key="{{index}}"> -->
+  <view class='message' data-id='{{foodlist[1].id}}' bindtap='toCookDetail'>
+    <view class='flex-column'>
+      <text class='message-title'>{{foodlist[1].menu_introduction}}</text>
+      <view class='message-visit'>
+        <view class='message-visit1'>999人看过</view>
+        <view class='message-visit2'>来自{{foodlist[1].name}}的分享</view>
+      </view>
+    </view>
+    <image class='message-img' src='{{foodlist[1].menu_step[foodlist[1].menu_step.length-1].pic}}'></image>  
   </view>
-  <image class='message-img' src='/image/01.jpg'></image>  
-</view>
-<view class='message'>
-  <view class='flex-column'>
-    <text class='message-title'>爱美的女人每天都为自己的身体下功夫,那么女人养生吃什么好?</text>
-    <text class='message-visit'>999人看过</text>
+<!-- </block> -->
+  <view class='message' data-id='{{foodlist[2].id}}' bindtap='toCookDetail'>
+    <view class='flex-column'>
+      <text class='message-title'>{{foodlist[2].menu_introduction}}</text>
+      <view class='message-visit'>
+         <text class='message-visit1'>999人看过</text>
+         <text class='message-visit2'>来自{{foodlist[2].name}}的分享</text>
+      </view>
+    </view>
+    <image class='message-img' src='{{foodlist[2].menu_step[foodlist[2].menu_step.length-1].pic}}'></image>  
   </view>
-  <image class='message-img' src='/image/01.jpg'></image>  
-</view>
-</view>
 <!-- 推荐 -->
+</view>
 
 <!-- 猜你喜欢 -->
   <view class='thinklikely'>
     <image class='like-icon' src='/image/icon/love.png'></image>猜你喜欢
   </view>
   <view class="foodpage1" bindtouchstart="touchStart" bindtouchend="touchEnd">
+
   <block wx:for="{{foodlist}}" wx:key="{{index}}">
   <view class='content' data-id='{{item.id}}' bindtap='toCookDetail'>
     <image class='content-img1' src='{{item.menu_step[item.menu_step.length-1].pic}}'></image>

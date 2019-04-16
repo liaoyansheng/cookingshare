@@ -1,0 +1,41 @@
+/* pages/Mymenu/Mymenu.wxss */
+.flex-row{
+  padding: 32rpx;
+  border-bottom:4rpx solid #F2F2F2;
+}
+.flex-column{
+  width: 406rpx;
+  height: 200rpx;
+}
+.cook_img{
+  width: 270rpx;
+  height: 200rpx;
+  margin-left:10px;
+}
+.cook_name{
+  font-size: 38rpx;
+  font-weight: 600;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap; 
+}
+.cook_method{
+  font-size: 30rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+.cook_people{
+  font-size: 24rpx;
+  color: #C0C0C0;
+}
+.cook_msg{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color:#808080;
+}

@@ -1,49 +1,91 @@
 <!--pages/personal/personal.wxml-->
+<view class="page" bindtouchstart="touchStart" bindtouchend="touchEnd">
+
 <view class='Navigation'>
-  <block wx:if="{{statu != 1}}"><view class='Navigation-one' bindtap='mycollection'>收藏</view> </block>
-  <block wx:if="{{statu == 1}}"><view class='Navigation-one' style='border-bottom:4rpx solid #FF6347'>收藏</view> </block>
-  <block wx:if="{{statu != 2}}"><view class='Navigation-one' bindtap='mymind'>关注</view> </block>
-  <block wx:if="{{statu == 2}}"><view class='Navigation-one' style='border-bottom:4rpx solid #FF6347'>关注</view> </block>
-  <block wx:if="{{statu != 3}}"><view class='Navigation-one' bindtap='mycomment'>评论</view> </block>
-  <block wx:if="{{statu == 3}}"><view class='Navigation-one' style='border-bottom:4rpx solid #FF6347'>评论</view> </block>
+  <view wx:if="{{statu != 1}}" class='Navigation-one' bindtap='mycollection'>收藏</view>
+  <view wx:if="{{statu == 1}}" class='Navigation-one1'>收藏</view>
+  <view wx:if="{{statu != 2}}" class='Navigation-one' bindtap='mymind'>关注</view>
+  <view wx:if="{{statu == 2}}" class='Navigation-one1' >关注</view>
+  <view wx:if="{{statu != 3}}" class='Navigation-one' bindtap='mycomment'>评论</view>
+  <view wx:if="{{statu == 3}}" class='Navigation-one1' >评论</view>
 </view>
 
 <view class='Navigation-copy'></view>
 
 <!-- 收藏 -->
 <block wx:if="{{statu == 1}}">
-<view class='content'>
-  <image class='cook_img' mode="widthFix" src='../../image/02.jpg'></image>
-  <view class='content-msg'>
-    <view class='content_name'>奶油巧克力蛋糕</view>
-    <view class='content_col'>999人收藏</view>
+  <block wx:for="{{collection}}" wx:key="{{index}}">
+  <view class='content' data-id='{{item.id}}' bindtap='toCookDetail'>
+    <image class='cook_img' mode="widthFix" src='{{item.menu_step[item.menu_step.length-1].pic}}'></image>
+    <view class='content-msg'>
+      <view class='content_name'>{{item.menu_title}}</view>
+      <view class='content_col'>{{item.createtime}}</view>
+    </view>
   </view>
-</view>
-<view class='content'>
-  <image class='cook_img' mode="widthFix" src='../../image/02.jpg'></image>
-  <view class='content-msg'>
-    <view class='content_name'>奶油巧克力蛋糕</view>
-    <view class='content_col'>999人收藏</view>
-  </view>
-</view>
-<view class='content'>
-  <image class='cook_img' mode="widthFix" src='../../image/02.jpg'></image>
-  <view class='content-msg'>
-    <view class='content_name'>奶油巧克力蛋糕</view>
-    <view class='content_col'>999人收藏</view>
-  </view>
-</view>
+  </block>
+  <block wx:if='{{collection.length==0}}'>
+    <view class='flex-center'>
+      <image class='nodata' src='/image/icon/nodata.png' lazy-load></image>
+      <!-- <view class='nodatamsg'>∑(っ °Д °;)っ这里空空如也</view> -->
+      <view class='nodatamsg' style='font-size:24rpx;'>（暂无收藏的记录）</view>
+    </view>
+  </block>
 </block>
 <!-- 收藏 -->
 
 <!-- 关注 -->
 <block wx:if="{{statu == 2}}">
-
+  <block wx:for="{{attention}}" wx:key="{{index}}">
+    <view class='cook_author'>
+    <view class='flex-row'>
+      <image class='cook_author_head' src='{{item.head_img}}'></image>
+      <view class='flex-column' style='margin-left:20rpx;'>
+        <view class='author_name'>
+        {{item.name}}
+        <image class='sex-icon' src='/image/icon/man1.png'></image>
+        </view>
+        <view class='author'>来自广东</view>
+      </view>
+    </view>
+    <view class='attented' data-name='{{item.name}}' bindtap='noattention'>
+      取消关注
+    </view>
+  </view>
+  </block>
+  <block wx:if='{{attention.length==0}}'>
+    <view class='flex-center'>
+      <image class='nodata' src='/image/icon/nodata.png' lazy-load></image>
+      <!-- <view class='nodatamsg'>∑( ° △ °|||)︴这里空空如也</view> -->
+      <view class='nodatamsg' style='font-size:24rpx;'>（暂无关注的记录）</view>
+    </view>
+  </block>
 </block>
 <!-- 关注 -->
 
 <!-- 评论 -->
 <block wx:if="{{statu == 3}}">
-
+  <block wx:for="{{comment}}" wx:key="{{index}}">
+  <view class='comment' data-id='{{item.menu_id}}' bindtap='toCookDetail'>
+    <view class='flex-row'>
+      <image class='cookShare-user-head' src='{{item.head_img}}'></image>
+      <view class='cookShare-user-name'>{{item.name}}</view>
+    </view>
+    <view class='comment_content'>
+      {{item.content}}
+    </view>
+    <view class='comment_content' style='font-size:20rpx;color:#808080;'>
+      {{item.createtime}}
+    </view>
+  </view>
+  </block>
+  <block wx:if='{{comment.length==0}}'>
+    <view class='flex-center'>
+      <image class='nodata' src='/image/icon/nodata.png' lazy-load></image>
+      <!-- <view class='nodatamsg'>（#－.－）这里空空如也</view> -->
+      <view class='nodatamsg' style='font-size:24rpx;'>（暂无评论的记录）</view>
+    </view>
+  </block>
 </block>
 <!-- 评论 -->
+
+</view>

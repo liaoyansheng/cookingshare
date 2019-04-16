@@ -1,26 +1,48 @@
 /* pages/CookRecord/CookRecord.wxss */
-.content{
-  width: 690rpx;
-  margin:30rpx;
+page{
+  background: url('https://www.liaoyansheng.top/public/uploads/test.jpg');
 }
-.release{
-  position: fixed;
-  bottom: 0;
-  height: 100rpx;
+.myshare{
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
   width: 750rpx;
-  line-height: 100rpx;
+  padding: 20rpx;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  width: 335rpx;
+  margin: 0 20rpx 20rpx 0;
+  border: 2rpx solid #F2F2F2;
+  border-radius: 20rpx;
+  /* box-shadow:4rpx 4rpx 10rpx #F2F2F2; */
+  background:#FFF;
+}
+.content-img{
+  width: 335rpx;
+  height: 300rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.content-work{
+  height: 80rpx;
+  line-height:40rpx;
+  width: 315rpx;
+  font-size:30rpx;
+  margin:10rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+.content-time{
+  width: 335rpx;
+  height: 40rpx;
   text-align: center;
-  color:#FFF;
-  background:#F3090D; 
-  font-size:32rpx;
-  border-radius:0;
-}
-.text-area{
-  width: 690rpx;
-  border-bottom:4rpx solid #F2F2F2;
-  padding-bottom:20rpx;
-}
-.pic_upload{
-  width: 230rpx;
-  height: 230rpx;
+  font-size:24rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap; 
 }

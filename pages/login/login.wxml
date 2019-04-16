@@ -1,0 +1,9 @@
+<!--pages/login/login.wxml-->
+<view class='background'>
+
+  <view class='background1'>
+    <image class='myicon' src='/image/foodshare.png'></image>
+    <button class='login-btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登录 </button>
+  </view>
+
+</view>

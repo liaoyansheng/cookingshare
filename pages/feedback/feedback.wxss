@@ -1,0 +1,41 @@
+/* pages/feedback/feedback.wxss */
+.myfeed{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  width: 710rpx;
+  height: 100vh;
+  margin: 0 20rpx;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-feed{
+  width: 710rpx;
+  height: 60rpx;
+  font-size:40rpx;
+  font-weight: 900;
+  text-align: center;
+  margin:30rpx 0;
+}
+.feed{
+  width:670rpx;
+  height:400rpx;
+  background:rgb(180, 177, 177);
+  border-radius:30rpx;
+  padding:20rpx;
+}
+.sub{
+  width:100rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border-radius:10rpx;
+  padding:20rpx 20rpx;
+  background: red;
+  color: #FFF;
+  margin:30rpx;
+}

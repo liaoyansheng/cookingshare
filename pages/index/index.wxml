@@ -19,15 +19,15 @@
 
 <view class='flex-row' style='border-bottom: 2rpx solid #F2F2F2;'>
   <view class='content-col' data-statu='1' hover-class='light' bindtap='topersonal'>
-    <text>6</text>
+    <text>{{collection.length}}</text>
     <text>收藏</text>
   </view>
   <view class='content-col text' data-statu='2' hover-class='light' bindtap='topersonal'>
-    <text>666</text>
+    <text>{{attention.length}}</text>
     <text>关注</text>
   </view>
   <view class='content-col' data-statu='3' hover-class='light' bindtap='topersonal'>
-    <text>6</text>
+    <text>{{comment.length}}</text>
     <text>评论</text>
   </view>
 </view>
@@ -35,6 +35,11 @@
 <view class='setup-usercall' hover-class='light' bindtap='toCookRecord'>
   <image class='icon' src='/image/icon/myshare.png'></image>
   <text style='width:600rpx;'>我的分享</text>
+  <text style="color:#bfbfbf;">></text>
+</view>
+<view class='setup-usercall' hover-class='light' bindtap='toMymenu'>
+  <image class='icon' src='/image/icon/cookmenthod.png'></image>
+  <text style='width:600rpx;'>我的菜谱</text>
   <text style="color:#bfbfbf;">></text>
 </view>
 <view class='setup-usercall' hover-class='light' bindtap='toCookMethod'>
@@ -50,19 +55,18 @@
 
 <view class='setup-title'>更多</view>
 
-<button open-type="contact" class='contact'>
-<view class='setup-usercall' hover-class='light'>
+<view class='setup-usercall' hover-class='light' bindtap='tofeedback'>
   <image class='icon' src='/image/icon/fankui.png'></image>
   <text style='width:600rpx;'>意见反馈</text>
   <text style="color:#bfbfbf;">></text>  
 </view>
-</button>
 
+<button open-type="contact" class='contact'>
 <view class='setup-usercall' hover-class='light'>
   <image class='icon' src='/image/icon/wechat.png'></image>
   <text style='width:600rpx;'>联系开发者</text>
   <text style="color:#bfbfbf;">></text>
 </view>
-
+</button>
 
 </view>

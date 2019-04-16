@@ -131,7 +131,7 @@ Page({
       dataType: 'json',
       success(res) {
         let food = res.data.filter(item => item.menu_step = JSON.parse(item.menu_step));
-        console.log(food);
+        //console.log(food);
         that.setData({
           foodlist: food
         })

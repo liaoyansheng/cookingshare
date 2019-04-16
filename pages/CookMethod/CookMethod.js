@@ -17,6 +17,10 @@ Page({
   },
  //发布上传
   keep:function(e){
+    wx.showLoading({
+      mask: true,
+      title: '上传中...',
+    });
     let that = this;
     wx.request({
       url: 'https://www.liaoyansheng.top/api/foodlist/addmenu',
@@ -31,6 +35,18 @@ Page({
       dataType: 'json',
       success(res) {
         console.log(res);
+        if (res.statusCode == 200) {
+          wx.hideLoading()
+          wx.showToast({
+            icon: 'success',
+            title: '上传成功',
+          })
+          setTimeout(function () {
+            wx.switchTab({
+              url: '../index/index',
+            })
+          }, 2000)
+        }
       }
     })
 
